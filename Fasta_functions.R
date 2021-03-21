@@ -2,7 +2,7 @@
 Title:   Fasta_functions
 Made by: Christian Garnons-Williams
 Made on: 2021-03-18
-Version: 2 (2021-03-21)
+Version: 3 (2021-03-21)
 "
 
 # Takes String FASTA file as input
@@ -10,8 +10,8 @@ Version: 2 (2021-03-21)
 # with each row representing a single FASTA entry from the FASTA file
 separate_fasta <- function(fasta){
    fasta <- unlist(strsplit(fasta, split = "\n\n"))
-   header <- gsub("(^>.*genome)(\\n|\\r).*", "\\1", fasta)
-   seq <- gsub("^>.*genome(\\n|\\r)(.*)", "\\2", fasta)
+   header <- gsub("(^>.*[a-z])(\\n|\\r).*", "\\1", fasta)
+   seq <- gsub("^>.*[a-z](\\n|\\r)(.*)", "\\2", fasta)
    seq <- gsub("\\n|\\r", "", seq)
    return(data.frame(Name = header, Sequence = seq))
 }
