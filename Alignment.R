@@ -1,5 +1,12 @@
+
+#Download package
+install.packages("adegenet")
+
+
+
 # Load ape
 library(ape)
+
 
 library(adegenet)
 #Country
@@ -21,9 +28,8 @@ checkAlignment(seqalign[1:20,1:3822])
 aligned<-as.alignment(seqalign[1:20,1:3822])
 aligned<-as.DNAbin(aligned)
 muts<-findMutations(aligned[1:20,],from = 1)
-muts
 
-sample_isolate$Mutations<-mutations
+
 
 #Gross Regex
 mut<-lapply(muts, "[",  "short")
@@ -31,5 +37,5 @@ mutchar<- lapply(mut, as.character)
 mutchar<-gsub("[()=]","",mutchar)
 mutchar<-sub("\\w+?","",mutchar)
 mutations<- c("Reference",mutchar)
-
+sample_isolate$Mutations<-mutations
 
