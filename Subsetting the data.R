@@ -7,7 +7,7 @@ dat <- read.csv('./Dataset/sequences.csv') %>%
   transmute(Accession, Length, Geo_Location)
 
 # Setting number of samples per country:
-N <- 100
+N <- 50
 
 # Filter dataset by country, and sampling N random samples from each
 dat_USA <- dat %>%

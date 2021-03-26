@@ -5,19 +5,22 @@
 remain = nrow(countries)
 i = 1
 j = 0
-fasta = ""
+Repdf_fasta = ""
 while(remain > 0){
   if (remain < 100)
     diff = remain
   else
     diff = 100
   j = j + diff
-  fasta <- paste(fasta, entrez_fetch(db = "nuccore",
-                                     id = countries[i:j,]$Accession,
-                                     rettype = "fasta"), sep = "")
+  Repdf_fasta <- paste(Repdf_fasta, entrez_fetch(db = "nuccore",
+                                                 id = countries[i:j,]$Accession,
+                                                 rettype = "fasta"), sep = "")
   i = i + diff
   remain = remain - diff
 }
+
+# Removing temp variables
+rm(diff, i, j, remain)
 
 ## For the new df
 # Cleaning FASTA
@@ -29,7 +32,8 @@ df_isolate <- isolate_seq(df_clean, start_motif, end_motif)
 # Checking length of each sequence
 df_isolate <- df_isolate %>%
   mutate(seq_len = nchar(Target))
-df_isolate<-cbind(df_isolate,Geo_Location=Newdf$Geo_Location)
+
+df_isolate <- cbind(df_isolate,Geo_Location = countries$Geo_Location)
 
 
 #=================================
@@ -59,3 +63,5 @@ mutchar<-gsub("[()=]","",mutchar)
 mutchar<-sub("\\w+?","",mutchar)
 mutations<- c("Reference",mutchar)
 df_isolate$Mutations<-mutations
+
+# Some extra
