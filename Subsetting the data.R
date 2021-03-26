@@ -2,16 +2,21 @@ dat <- read.csv('./Dataset/sequences.csv')
 library(dplyr)
 library(stringr)
 
-dat <- dat %>% filter(Nuc_Completeness == 'complete') %>% filter(Geo_Location != '')
+dat <- read.csv('./Dataset/sequences.csv')
 
-dat_USA <- dat %>% filter(str_detect(Geo_Location, 'USA'))
-dat_CHINA <- dat %>% filter(str_detect(Geo_Location, 'China'))
-dat_AUSTRALIA <- dat %>% filter(str_detect(Geo_Location, 'Australia'))
-dat_INDIA <- dat %>% filter(str_detect(Geo_Location, 'India'))
-dat_JAPAN<- dat %>% filter(str_detect(Geo_Location, 'Japan'))
+# Filter dataset by completeness
+dat <- dat %>% filter(Nuc_Completeness == 'complete')
 
-dat <- dat %>% filter(Nuc_Completeness == 'complete') %>% filter(Geo_Location != '')
-<<<<<<< HEAD
+# Collect country
+dat_USA <- dat %>% filter(str_detect(Geo_Location, 'USA')) %>% slice_sample(n = 100)
 
-=======
->>>>>>> d12074ceb473a1f753cae9d81b832807abfc4648
+dat_CHINA <- dat %>% filter(str_detect(Geo_Location, 'China'))%>% slice_sample(n = 100)
+
+dat_AUSTRALIA <- dat %>% filter(str_detect(Geo_Location, 'Australia')) %>% slice_sample(n = 100)
+
+dat_INDIA <- dat %>% filter(str_detect(Geo_Location, 'India'))%>% slice_sample(n = 100)
+
+dat_JAPAN<- dat %>% filter(str_detect(Geo_Location, 'Japan'))%>% slice_sample(n = 100)
+
+# Dataset with the selected countries
+countries <- data.frame(dat_JAPAN, dat_INDIA, dat_AUSTRALIA, dat_CHINA, dat_USA)
