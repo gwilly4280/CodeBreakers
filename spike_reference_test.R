@@ -57,3 +57,6 @@ nchar(spike_seq)
 # Checking if all isolated sequences are the same length
 sample_isolate$seq_len == nchar(spike_seq)
 # All sequences are the same length - successful extraction of the protein seq
+
+# Removing clutter variables
+rm(spike_seq, spike_fasta, sample_isolate, sample_clean, sample, sample_fasta, sequences, fileName)
