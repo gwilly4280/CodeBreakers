@@ -39,4 +39,4 @@ dat_JAPAN <- dat %>%
 countries <- rbind(dat_JAPAN, dat_INDIA, dat_AUSTRALIA, dat_CHINA, dat_USA)
 
 # Removing the temp data files
-rm(dat_AUSTRALIA, dat_CHINA, dat_USA, dat_INDIA, dat_JAPAN)
+rm(dat, N, dat_AUSTRALIA, dat_CHINA, dat_USA, dat_INDIA, dat_JAPAN)
