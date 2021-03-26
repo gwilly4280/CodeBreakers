@@ -19,7 +19,7 @@ get_muts <- function(mutant_df){
   return(mutant_df %>% filter(Mutations %notin% not_mut))
 }
 
-########### Work with the reference muations ###########
+########### Work with the reference mutations ###########
 
 # Load mutation file
 mutations <- read.csv("./Dataset/mutations.csv")
@@ -41,4 +41,4 @@ ref_mutations <- mutations %>%
   group_by(row.names(mutations)) %>%
   mutate(Change = extract_mut(Change,Location))
 
-rm(mutations)
+rm(mutations, extract_mut)
