@@ -1,10 +1,23 @@
-# A representative df, # of sequences from each country using the subsetting code
-Repdf<-rbind(sample_n(dat_USA, 10),sample_n(dat_CHINA, 10),sample_n(dat_AUSTRALIA, 10),sample_n(dat_INDIA, 10),sample_n(dat_JAPAN, 10))
 
 # Adapting Spike reference code to work with repdf
-Repdf_fasta <- entrez_fetch(db = "nuccore",
-                            id = Repdf$Accession,
-                            rettype = "fasta")
+# Code added to get it to process more than 100 sequences at a time
+# It has to loop through 100 at at time, or it doesn't work >:(
+remain = nrow(countries)
+i = 1
+j = 0
+fasta = ""
+while(remain > 0){
+  if (remain < 100)
+    diff = remain
+  else
+    diff = 100
+  j = j + diff
+  fasta <- paste(fasta, entrez_fetch(db = "nuccore",
+                                     id = countries[i:j,]$Accession,
+                                     rettype = "fasta"), sep = "")
+  i = i + diff
+  remain = remain - diff
+}
 
 ## For the new df
 # Cleaning FASTA
