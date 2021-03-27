@@ -89,7 +89,6 @@ end_motif <- substr(spike_seq, nchar(spike_seq) - 11, nchar(spike_seq))
 ```
 
 # Loading Spike reference test
-
 ```{r}
 # Setting correct filename & extension
 fileName <- "./Dataset/spike_reference.txt"
