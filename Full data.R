@@ -62,6 +62,7 @@ mutchar<- lapply(mut, as.character)
 mutchar<-gsub("[()=]","",mutchar)
 mutchar<-sub("\\w+?","",mutchar)
 mutations<- c("Reference",mutchar)
-df_isolate$Mutations<-mutations
+df_isolate$Mutations <- mutations
 
-# Some extra
+# Removing extra variables
+rm(df_clean, isolatedseq, seqalign, aligned, muts, mut, mutchar, mutations, Repdf_fasta)
