@@ -19,12 +19,19 @@ fileName <- "./Dataset/spike_reference.txt"
 spike_fasta <-  readChar(fileName, file.info(fileName)$size)
 
 # Clean FASTA file & remove sequence
-spike_seq <- separate_fasta(spike_fasta)$Sequence
+spike_ref <- separate_fasta(spike_fasta)
 
 # Getting start & end motifs to capture our sequence of 12 bp/side
-start_motif <- substr(spike_seq, 1, 12)
-end_motif <- substr(spike_seq, nchar(spike_seq) - 11, nchar(spike_seq))
+start_motif <- substr(spike_ref$Sequence, 1, 12)
+end_motif <- substr(spike_ref$Sequence,
+                    nchar(spike_ref$Sequence) - 11,
+                    nchar(spike_ref$Sequence))
 
+# Removing excess variables
+rm(fileName, spike_fasta)
+
+# Testing code commented out. If needed, remove the quotations at start/end of block
+'
 ####### LOADING TEST DATA #######
 
 # Load in sequence data & filter by completeness + ensure all have accession no.
@@ -59,4 +66,5 @@ sample_isolate$seq_len == nchar(spike_seq)
 # All sequences are the same length - successful extraction of the protein seq
 
 # Removing clutter variables
-rm(spike_seq, spike_fasta, sample_isolate, sample_clean, sample, sample_fasta, sequences, fileName)
+rm(, , sample_isolate, sample_clean, sample, sample_fasta, sequences, )
+'

@@ -4,6 +4,28 @@ output: html_notebook
 ---
 SOMEWHAT FULL SCRIPT 
 
+
+**Workflow**:
+
+  1. *Subsetting the data.R*: load, subset & sample dataset 
+      * Output: countries (dataframe)
+      
+  2. *Fasta_function.R*: initialize FASTA manipulating functions
+  
+  3. *spike_reference_test.R*: Load in reference spike sequence and get start/end motifs.
+  
+  4. *Full Data.R*: Get FASTA files, process & isolate target sequences, align sequences & flag mutations
+      * Output: df_isolate (dataframe)
+      
+  5. *Mutation_function.R*: Initialize mutation isolation functions, load and format reference mutation data
+      * Output: ref_mutations (dataframe)
+  
+  .
+  .
+  .
+
+More to follow
+
 ### Loading libraries
 ```{r}
 library(ape)
