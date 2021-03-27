@@ -33,6 +33,7 @@ library(adegenet)
 library(dplyr)
 library(stringr)
 library(readr)
+library(rentrez)
 ```
 
 
@@ -42,15 +43,15 @@ dat <- read.csv('./Dataset/sequences.csv')
 
 # Filter dataset by countries (*missing completeness)
 
-dat_USA <- dat %>% filter(str_detect(Geo_Location, 'USA')) %>% mutate(Geo_Location = "USA") %>% slice_sample(n = 100)
+dat_USA <- dat %>% filter(str_detect(Geo_Location, 'USA')) %>% mutate(Geo_Location = "USA") %>% slice_sample(n = 50)
 
-dat_CHINA <- dat %>% filter(str_detect(Geo_Location, 'China')) %>% mutate(Geo_Location = "CHN") %>% slice_sample(n = 100)
+dat_CHINA <- dat %>% filter(str_detect(Geo_Location, 'China')) %>% mutate(Geo_Location = "CHN") %>% slice_sample(n = 50)
 
-dat_AUSTRALIA <- dat %>% filter(str_detect(Geo_Location, 'Australia')) %>% mutate(Geo_Location = "AUS") %>% slice_sample(n = 100)
+dat_AUSTRALIA <- dat %>% filter(str_detect(Geo_Location, 'Australia')) %>% mutate(Geo_Location = "AUS") %>% slice_sample(n = 50)
 
-dat_INDIA <- dat %>% filter(str_detect(Geo_Location, 'India')) %>% mutate(Geo_Location = "IND") %>% slice_sample(n = 100)
+dat_INDIA <- dat %>% filter(str_detect(Geo_Location, 'India')) %>% mutate(Geo_Location = "IND") %>% slice_sample(n = 50)
 
-dat_JAPAN<- dat %>% filter(str_detect(Geo_Location, 'Japan')) %>% mutate(Geo_Location = "JPN") %>% slice_sample(n = 100)
+dat_JAPAN<- dat %>% filter(str_detect(Geo_Location, 'Japan')) %>% mutate(Geo_Location = "JPN") %>% slice_sample(n = 50)
 
 # Final sequences Dataset with the selected countries
 countries <- data.frame(dat_JAPAN, dat_INDIA, dat_AUSTRALIA, dat_CHINA, dat_USA)
@@ -87,9 +88,31 @@ start_motif <- substr(spike_seq, 1, 12)
 end_motif <- substr(spike_seq, nchar(spike_seq) - 11, nchar(spike_seq))
 ```
 
+# Loading Spike reference test
 
+```{r}
+# Setting correct filename & extension
+fileName <- "./Dataset/spike_reference.txt"
 
+# Load in the reference sequence
+spike_fasta <-  readChar(fileName, file.info(fileName)$size)
 
+# Clean FASTA file & convert to format compatible with dataset
+spike_ref <- separate_fasta(spike_fasta) %>%
+  mutate(Target = Sequence,
+         Sequence = "NULL",
+         seq_len = nchar(Target),
+         Geo_Location = "REF")
+
+# Getting start & end motifs to capture our sequence of 12 bp/side
+start_motif <- substr(spike_ref$Target, 1, 12)
+end_motif <- substr(spike_ref$Target,
+                    nchar(spike_ref$Target) - 11,
+                    nchar(spike_ref$Target))
+
+# Removing excess variables
+rm(fileName, spike_fasta)
+```
 
 
 
