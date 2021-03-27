@@ -18,14 +18,18 @@ fileName <- "./Dataset/spike_reference.txt"
 # Load in the reference sequence
 spike_fasta <-  readChar(fileName, file.info(fileName)$size)
 
-# Clean FASTA file & remove sequence
-spike_ref <- separate_fasta(spike_fasta)
+# Clean FASTA file & convert to format compatible with dataset
+spike_ref <- separate_fasta(spike_fasta) %>%
+  mutate(Target = Sequence,
+         Sequence = "NULL",
+         seq_len = nchar(Target),
+         Geo_Location = "REF")
 
 # Getting start & end motifs to capture our sequence of 12 bp/side
-start_motif <- substr(spike_ref$Sequence, 1, 12)
-end_motif <- substr(spike_ref$Sequence,
-                    nchar(spike_ref$Sequence) - 11,
-                    nchar(spike_ref$Sequence))
+start_motif <- substr(spike_ref$Target, 1, 12)
+end_motif <- substr(spike_ref$Target,
+                    nchar(spike_ref$Target) - 11,
+                    nchar(spike_ref$Target))
 
 # Removing excess variables
 rm(fileName, spike_fasta)
