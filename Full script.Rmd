@@ -108,6 +108,28 @@ start_motif <- substr(spike_seq, 1, 12)
 end_motif <- substr(spike_seq, nchar(spike_seq) - 11, nchar(spike_seq))
 ```
 
+# Creating FASTA function
+```{r}
+# Takes String FASTA file as input
+# Returns dataframe w/ w/ 1 col for header, & 1 for raw sequence
+# with each row representing a single FASTA entry from the FASTA file
+separate_fasta <- function(fasta){
+   fasta <- unlist(strsplit(fasta, split = "\n\n"))
+   header <- gsub("(^>.*[a-z])(\\n|\\r).*", "\\1", fasta)
+   seq <- gsub("^>.*[a-z](\\n|\\r)(.*)", "\\2", fasta)
+   seq <- gsub("\\n|\\r", "", seq)
+   return(data.frame(Name = header, Sequence = seq))
+}
+
+
+# Takes df created by *separate_fasta*, and a start seq, and end seq (as String)
+# Returns df w/ new "Target" col: sequence w/in & including start:end motifs
+isolate_seq <- function(df, start, end){
+   df$Target = gsub(paste(".*(", start, ".*?",end, ").*", sep=""), "\\1", df$Sequence)
+   return(df)
+}
+```
+
 # Loading Spike reference test
 ```{r}
 # Setting correct filename & extension
@@ -133,27 +155,6 @@ end_motif <- substr(spike_ref$Target,
 rm(fileName, spike_fasta)
 ```
 
-# Creating FASTA function
-```{r}
-# Takes String FASTA file as input
-# Returns dataframe w/ w/ 1 col for header, & 1 for raw sequence
-# with each row representing a single FASTA entry from the FASTA file
-separate_fasta <- function(fasta){
-   fasta <- unlist(strsplit(fasta, split = "\n\n"))
-   header <- gsub("(^>.*[a-z])(\\n|\\r).*", "\\1", fasta)
-   seq <- gsub("^>.*[a-z](\\n|\\r)(.*)", "\\2", fasta)
-   seq <- gsub("\\n|\\r", "", seq)
-   return(data.frame(Name = header, Sequence = seq))
-}
-
-
-# Takes df created by *separate_fasta*, and a start seq, and end seq (as String)
-# Returns df w/ new "Target" col: sequence w/in & including start:end motifs
-isolate_seq <- function(df, start, end){
-   df$Target = gsub(paste(".*(", start, ".*?",end, ").*", sep=""), "\\1", df$Sequence)
-   return(df)
-}
-```
 
 # Adapting Spike reference code to work with repdf
 Code added to get it to process more than 100 sequences at a time
