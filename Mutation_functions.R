@@ -19,7 +19,7 @@ get_muts <- function(mutant_df){
   return(mutant_df %>% filter(Mutations %notin% not_mut))
 }
 
-########### Work with the reference muations ###########
+########### Work with the reference mutations ###########
 
 # Load mutation file
 mutations <- read.csv("./Dataset/mutations.csv")
@@ -31,7 +31,7 @@ extract_mut <- function(raw_muts, pos){
   new <- strsplit(muts, split = "")[[2]]
   for (i in c(1:3)){
     if (!grepl(origin[i], new[i])){
-      return(paste((i-1 + pos), ":" , origin[i], "->", new[i], sep=""))
+      return(paste((i-1 + pos), ":" , tolower(origin[i]), "->", tolower(new[i]), sep=""))
     }
   }
 }
