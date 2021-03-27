@@ -26,7 +26,7 @@ mutations <- read.csv("./Dataset/mutations.csv")
 
 # Function for extracting usable mutations from the reference mutation dataset
 extract_mut <- function(raw_muts, pos){
-  muts <- strsplit(mutations$Change, split = " > ")[[1]]
+  muts <- strsplit(raw_muts, split = " > ")[[1]]
   origin <- strsplit(muts, split = "")[[1]]
   new <- strsplit(muts, split = "")[[2]]
   for (i in c(1:3)){
