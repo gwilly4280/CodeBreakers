@@ -37,7 +37,7 @@ extract_mut <- function(raw_muts, pos){
 }
 
 # Dyplr code to convert the mutations into something usable
-ref_mutations <- mutations %>%
+mutations_ref <- mutations %>%
   group_by(row.names(mutations)) %>%
   mutate(Change = extract_mut(Change,Location))
 

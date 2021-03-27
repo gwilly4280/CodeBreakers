@@ -18,13 +18,13 @@ SOMEWHAT FULL SCRIPT
       * Output: df_isolate (dataframe)
       
   5. *Mutation_function.R*: Initialize mutation isolation functions, load and format reference mutation data
-      * Output: ref_mutations (dataframe)
+      * Output: mutations_ref (dataframe)
   
   .
   .
   .
 
-More to follow
+More to follow...
 
 ### Loading libraries
 ```{r}
