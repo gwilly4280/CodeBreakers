@@ -70,7 +70,10 @@ clean_mut <- function(mut, ref_muts){
   return (newmut) # Returns as list, so it can be stored in dataframe
 }
 
-# Dplyr code to rapidly get through the
+# Dplyr code to rapidly process the entire dataset
 df_isolate <- df_isolate %>%
   group_by(row.names(df_isolate)) %>%
   mutate(Mutations = I(clean_mut(Mutations, mutations_ref))) # calls clean_mut()
+
+# Delete temp row.names column
+df_isolate = df_isolate[-7]
