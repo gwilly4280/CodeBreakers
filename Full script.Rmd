@@ -2,8 +2,7 @@
 title: "R Notebook"
 output: html_notebook
 ---
-SOMEWHAT FULL SCRIPT 
-
+PART 1 OF OUR FULL SCRIPT
 
 **Workflow**:
 
@@ -26,8 +25,12 @@ SOMEWHAT FULL SCRIPT
 
 More to follow...
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 ### Loading libraries
-```{r}
+```{r, include=FALSE}
 library(ape)
 library(adegenet)
 library(dplyr)
@@ -226,8 +229,7 @@ mutations<- c("Reference",mutchar)
 df_isolate$Mutations <- mutations
 
 # Removing extra variables
-rm(df_clean, isolatedseq, seqalign, aligned, muts, mut, mutchar, mutations, Repdf_fasta)
-
+rm(df_clean, isolatedseq, muts, mut, mutchar, mutations)
 ```
 
 
