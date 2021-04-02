@@ -112,7 +112,9 @@ spike_fasta <-  readChar(fileName, file.info(fileName)$size)
 spike_seq <- separate_fasta(spike_fasta)$Sequence
 
 # Getting start & end motifs to capture our sequence of 12 bp/side
-start_motif <- substr(spike_seq, 1, 12)
+start_motif <- paste(substr(spike_seq, 1, 6), 
+                     "[GT]", # to accommodate a mutation in the start motif 
+                     substr(spike_seq, 8, 12), sep = "")
 end_motif <- substr(spike_seq, nchar(spike_seq) - 11, nchar(spike_seq))
 ```
 
@@ -230,7 +232,7 @@ mutations<- c("Reference",mutchar)
 df_isolate$Mutations <- mutations
 
 # Removing extra variables
-rm(df_clean, isolatedseq, muts, mut, mutchar, mutations)
+rm(df_clean, isolatedseq, seqalign, aligned, muts, mut, mutchar, mutations, Repdf_fasta)
 ```
 
 

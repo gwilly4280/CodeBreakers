@@ -26,7 +26,9 @@ spike_ref <- separate_fasta(spike_fasta) %>%
          Geo_Location = "REF")
 
 # Getting start & end motifs to capture our sequence of 12 bp/side
-start_motif <- substr(spike_ref$Target, 1, 12)
+start_motif <- paste(substr(spike_seq, 1, 6),
+                     "[GT]", # to accommodate a mutation in the start motif
+                     substr(spike_seq, 8, 12), sep = "")
 end_motif <- substr(spike_ref$Target,
                     nchar(spike_ref$Target) - 11,
                     nchar(spike_ref$Target))
