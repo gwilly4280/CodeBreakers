@@ -44,6 +44,9 @@ dat <- read.csv('./Dataset/sequences.csv') %>%
   filter(Nuc_Completeness == "complete") %>%
   transmute(Accession, Length, Geo_Location)
 
+# Setting seed for replicability
+set.seed(1)
+
 # Setting number of samples per country:
 N <- 50
 

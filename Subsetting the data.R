@@ -9,6 +9,9 @@ dat <- read.csv('./Dataset/sequences.csv') %>%
 # Setting number of samples per country:
 N <- 50
 
+# Set seed for replicability
+set.seed(1)
+
 # Filter dataset by country, and sampling N random samples from each
 dat_USA <- dat %>%
   filter(str_detect(Geo_Location, 'USA')) %>%
