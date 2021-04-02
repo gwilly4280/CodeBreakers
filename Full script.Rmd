@@ -202,6 +202,7 @@ df_isolate <- rbind(spike_ref, cbind(df_isolate,Geo_Location = countries$Geo_Loc
 N = nrow(df_isolate)
 ```
 
+
 # Mutations
 ```{r}
 #To obtain the sequence we use the sapply function
@@ -232,6 +233,82 @@ df_isolate$Mutations <- mutations
 rm(df_clean, isolatedseq, muts, mut, mutchar, mutations)
 ```
 
+
+Find mutation accessions in reference, and add to df_isolate:
+```{r}
+########### Work with the reference mutations ###########
+
+# Load mutation file
+mutations <- read.csv("./Dataset/mutations.csv")
+
+# Function for extracting usable mutations from the reference mutation dataset
+extract_mut <- function(raw_muts, pos){
+  muts <- strsplit(raw_muts, split = " > ")[[1]]
+  origin <- strsplit(muts, split = "")[[2]] # flipped here to be compatible with our dataset
+  new <- strsplit(muts, split = "")[[1]]
+  for (i in c(1:3)){
+    if (!grepl(origin[i], new[i])){
+      return(paste((pos - 21562), ":" , tolower(origin[i]), "->", tolower(new[i]), sep=""))
+    }
+  }
+}
+
+
+# Dyplr code to convert the mutations into something usable
+mutations_ref <- mutations %>%
+  group_by(row.names(mutations)) %>%
+  mutate(Change = extract_mut(Change,Location))
+
+# Remove row.names columns
+mutations_ref <- mutations_ref[-8]
+
+# Removing the temp variable
+rm(mutations, extract_mut)
+
+
+
+########### Work with the Extracted mutations ###########
+
+# Function searching through mutations_ref using df_isolate mutations.
+# Takes a single row's cleaned mutations & the reference file as argument.
+# Returns vector of mutation names from the reference data if found;
+# if match not found, returns unchanged mutation notation.
+# Called by "clean_mut()"
+get_name <- function(muts, ref_muts){
+  for (i in c(1:length(muts))){
+    result = grep(paste("^", muts[i], sep=""), ref_muts$Change)
+    if (length(result) > 0){ # If match found
+      muts[i] = ref_muts$Designation[result]
+    }
+  }
+  return (muts)
+}
+
+# Function to extract mutation info from a single row of df_isolate mutations.
+# Takes a single row's raw mutations & the reference file as argument.
+# Returns LIST of mutation names from the reference data if found;
+# if match not found, cleaned mutation notation is returned instead.
+# Calls: get_name(), to perform comparison to reference data
+clean_mut <- function(mut, ref_muts){
+  not_mut = c("haracter0", "Reference")
+  if (mut %in% not_mut){ # If no mutation:
+    newmut = list("Reference")
+  } else{ # If mutation:
+    newmut = gsub("[\"\\]", "", strsplit(mut, ", ")[[1]])
+    newmut = list(get_name(newmut, ref_muts)) # Calls get_name()^
+  }
+  return (newmut) # Returns as list, so it can be stored in dataframe
+}
+
+# Dplyr code to rapidly process the entire dataset
+df_isolate <- df_isolate %>%
+  group_by(row.names(df_isolate)) %>%
+  mutate(Mutations = I(clean_mut(Mutations, mutations_ref))) # calls clean_mut()
+
+# Delete temp row.names column
+df_isolate = df_isolate[-7]
+
+```
 
 
 
