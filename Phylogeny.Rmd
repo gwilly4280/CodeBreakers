@@ -56,7 +56,7 @@ str(tree)
 ```{r, fig.height=40, fig.width=10}
 # Phylogenetic tree highlighting the countries where covid mutations and evolution
 # seemed to occur
-ggtree(tree,layout = "rectangular") +
+p <- ggtree(tree,layout = "rectangular") +
   geom_tiplab() +
   geom_hilight(node = 439, fill = "light pink") +
   geom_hilight(node = 456, fill = "light blue") +
@@ -66,8 +66,14 @@ ggtree(tree,layout = "rectangular") +
   geom_hilight(node = 453, fill = "DarkSeaGreen") +
   geom_hilight(node = 447, fill = "LightCoral") +
   geom_hilight(node = 452, fill = "MediumAquamarine")
+
+p
 ```
 
+```{r}
+pp <- (p + scale_y_continuous(expand = c(0, 0.3))) %>%
+  gheatmap(genotype)
+```
 
 
 ## This is the tree with the mutations unsure what to do with it rn
@@ -94,9 +100,18 @@ dist_dna <- dist.dna(mut_seqalign, model = "K80")
 dist_matrix <- as.matrix(dist_dna)
 # Converting to phylogenic tree
 allign_tree <- nj(dist_matrix)
+
 # Visualizing Tree
 ggtree(allign_tree, ) +
-   geom_tiplab()
+  geom_tiplab() +
+  geom_hilight(node = 439, fill = "light pink") +
+  geom_hilight(node = 456, fill = "light blue") +
+  geom_hilight(node = 454, fill = "LemonChiffon") +
+  geom_hilight(node = 455, fill = "Moccasin") +
+  geom_hilight(node = 440, fill = "Burlywood") +
+  geom_hilight(node = 453, fill = "DarkSeaGreen") +
+  geom_hilight(node = 447, fill = "LightCoral") +
+  geom_hilight(node = 452, fill = "MediumAquamarine")
 ```
 
 
