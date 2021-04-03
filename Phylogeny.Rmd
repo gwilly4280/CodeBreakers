@@ -70,14 +70,9 @@ p <- ggtree(tree,layout = "rectangular") +
 p
 ```
 
-```{r}
-pp <- (p + scale_y_continuous(expand = c(0, 0.3))) %>%
-  gheatmap(genotype)
-```
 
 
 ## This is the tree with the mutations unsure what to do with it rn
-Final tree
 ```{r, fig.height=40, fig.width=10}
 # Visualizing the tree
 
@@ -113,16 +108,4 @@ ggtree(allign_tree, ) +
   geom_hilight(node = 447, fill = "LightCoral") +
   geom_hilight(node = 452, fill = "MediumAquamarine")
 ```
-
-
-
-
-
-
-
-
-
-
-
-
 
