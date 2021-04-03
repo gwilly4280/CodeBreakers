@@ -1,0 +1,328 @@
+Collection Date,Mutation,df_isolate_row,,"  [1] "">NC_045512.2:21563-25384 Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome""                                "
+2019-12-01,Reference,1,,"  [2] "">LC573278.1 Severe acute respiratory syndrome coronavirus 2 TKYE618930_2020 genomic RNA, nearly complete genome""                             "
+2020-06-01,458:t->c,2,,"  [3] "">LC565409.1 Severe acute respiratory syndrome coronavirus 2 TKYV12527_2020 genomic RNA, nearly complete genome""                              "
+2020-06-01,D614G,2,,"  [4] "">LC581375.1 Severe acute respiratory syndrome coronavirus 2 TKYE64688_2020 genomic RNA, complete genome""                                     "
+2020-04-01,841:a->g,3,,"  [5] "">LC553270.1 Severe acute respiratory syndrome coronavirus 2 TKYE63442_2020 RNA, complete genome""                                             "
+2020-03-01,Reference,4,,"  [6] "">LC594651.1 Severe acute respiratory syndrome coronavirus 2 JP_Hiro97618 RNA, complete genome""                                               "
+2020-03-01,841:a->g,5,,"  [7] "">LC567847.1 Severe acute respiratory syndrome coronavirus 2 TKYE615664_2020 genomic RNA, nearly complete genome""                             "
+2020-08-03,841:a->g,6,,"  [8] "">LC565411.1 Severe acute respiratory syndrome coronavirus 2 TKYV12689_2020 genomic RNA, nearly complete genome""                              "
+2020-05-01,D614G,7,,"  [9] "">LC581368.1 Severe acute respiratory syndrome coronavirus 2 TKYE63558d_2020 genomic RNA, complete genome""                                    "
+2020-05-01,G1219V,7,," [10] "">LC556317.1 Severe acute respiratory syndrome coronavirus 2 TKYE610497_2020 genomic RNA, nearly complete genome""                             "
+2020-04-01,T95I,8,," [11] "">LC581364.1 Severe acute respiratory syndrome coronavirus 2 TKYE63319_2020 genomic RNA, complete genome""                                     "
+2020-04-01,D614G,8,," [12] "">LC581367.1 Severe acute respiratory syndrome coronavirus 2 TKYE63558_2020 genomic RNA, complete genome""                                     "
+2020-03-01,Reference,9,," [13] "">LC546038.1 Severe acute respiratory syndrome coronavirus 2 SARS-CoV-2/Hu/Kng/19-865 RNA, complete genome""                                   "
+2020-04-01,F541F,10,," [14] "">LC572070.1 Severe acute respiratory syndrome coronavirus 2 TKYE615177_2020 RNA, complete genome""                                            "
+2020-04-01,D614G,10,," [15] "">LC567848.1 Severe acute respiratory syndrome coronavirus 2 TKYE615667_2020 genomic RNA, nearly complete genome""                             "
+2020-03-01,Reference,11,," [16] "">LC553258.1 Severe acute respiratory syndrome coronavirus 2 TKY9810_2020 RNA, nearly complete genome""                                        "
+2020-03-01,Reference,12,," [17] "">LC547530.1 Severe acute respiratory syndrome coronavirus 2 hCoV-19/Japan/P4-8/2020 RNA, complete genome""                                    "
+2020-03-23,841:a->g,13,," [18] "">LC547526.1 Severe acute respiratory syndrome coronavirus 2 hCoV-19/Japan/P4-4/2020 RNA, complete genome""                                    "
+2020-05-01,841:a->g,14,," [19] "">LC567846.1 Severe acute respiratory syndrome coronavirus 2 TKYE615484_2020 genomic RNA, nearly complete genome""                             "
+2020-05-01,D614G,15,," [20] "">LC593802.1 Severe acute respiratory syndrome coronavirus 2 TKYT22355 genomic RNA, complete genome""                                          "
+2020-05-01,G1219V,15,," [21] "">LC573289.2 Severe acute respiratory syndrome coronavirus 2 SARS-CoV-2/Hu/KngFJ/23RD5 RNA, complete genome""                                  "
+2020-04-01,841:a->g,16,," [22] "">LC593814.1 Severe acute respiratory syndrome coronavirus 2 TKYE630094_2020 genomic RNA, complete genome""                                    "
+2020-03-19,F562F,17,," [23] "">LC572069.1 Severe acute respiratory syndrome coronavirus 2 TKYE614992_2020 RNA, complete genome""                                            "
+2020-03-19,D614G,17,," [24] "">LC581366.1 Severe acute respiratory syndrome coronavirus 2 TKYE63557d_2020 genomic RNA, complete genome""                                    "
+2020-03-17,841:a->g,18,," [25] "">LC567857.1 Severe acute respiratory syndrome coronavirus 2 TKY17873_2020 genomic RNA, nearly complete genome""                               "
+2020-05-01,841:a->g,19,," [26] "">LC594647.1 Severe acute respiratory syndrome coronavirus 2 JP_Hiro94253 RNA, complete genome""                                               "
+2020-07-01,458:t->c,20,," [27] "">LC594649.1 Severe acute respiratory syndrome coronavirus 2 JP_Hiro97166 RNA, complete genome""                                               "
+2020-07-01,D614G,20,," [28] "">LC581369.1 Severe acute respiratory syndrome coronavirus 2 TKYE63736_2020 genomic RNA, complete genome""                                     "
+2020-06-01,841:a->g,21,," [29] "">LC565412.1 Severe acute respiratory syndrome coronavirus 2 TKYE613035_2020 genomic RNA, nearly complete genome""                             "
+2020-08-01,458:t->c,22,," [30] "">LC547533.1 Severe acute respiratory syndrome coronavirus 2 hCoV-19/Japan/P5-3/2020 RNA, complete genome""                                    "
+2020-08-01,D614G,22,," [31] "">LC547525.1 Severe acute respiratory syndrome coronavirus 2 hCoV-19/Japan/P4-3/2020 RNA, complete genome""                                    "
+2020-08-01,S640F,22,,
+2020-05-01,D614G,23,,
+2020-05-01,D848D,23,,
+2020-03-01,Reference,24,,
+2020-05-01,841:a->g,25,,
+2020-04-20,841:a->g,26,,
+2020-07-29,458:t->c,27,,
+2020-07-29,D614G,27,,
+2020-03-01,Reference,28,,
+2020-04-01,841:a->g,29,,
+2020-03-13,841:a->g,30,,
+2020-03-13,841:a->g,31,,
+2020-07-01,841:a->g,32,," [32] "">LC593804.1 Severe acute respiratory syndrome coronavirus 2 TKYE622388_2020 genomic RNA, complete genome""                                    "
+2020-03-01,Reference,33,," [33] "">LC581374.1 Severe acute respiratory syndrome coronavirus 2 TKYE63751d_2020 genomic RNA, complete genome""                                    "
+2020-03-20,841:a->g,34,," [34] "">LC547522.1 Severe acute respiratory syndrome coronavirus 2 hCoV-19/Japan/P3-2/2020 RNA, complete genome""                                    "
+2020-07-01,458:t->c,35,," [35] "">LC593801.1 Severe acute respiratory syndrome coronavirus 2 TKYT22342_2020 genomic RNA, complete genome""                                     "
+2020-07-01,D614G,35,," [36] "">LC553257.1 Severe acute respiratory syndrome coronavirus 2 TKY9588_2020 RNA, nearly complete genome""                                        "
+2020-04-01,841:a->g,36,," [37] "">LC593809.1 Severe acute respiratory syndrome coronavirus 2 TKYE622414_2020 genomic RNA, complete genome""                                    "
+2020-07-01,841:a->g,37,," [38] "">LC581376.1 Severe acute respiratory syndrome coronavirus 2 TKYE64688d_2020 genomic RNA, complete genome""                                    "
+2020-03-01,Reference,38,," [39] "">LC573286.1 Severe acute respiratory syndrome coronavirus 2 TKYE620260_2020 genomic RNA, nearly complete genome""                             "
+2020-06-01,841:a->g,39,," [40] "">LC567859.1 Severe acute respiratory syndrome coronavirus 2 TKY17926_2020 genomic RNA, nearly complete genome""                               "
+2020-05-01,841:a->g,40,," [41] "">LC567854.1 Severe acute respiratory syndrome coronavirus 2 TKYE615221_2020 genomic RNA, nearly complete genome""                             "
+2020-05-01,841:a->g,41,," [42] "">LC556316.1 Severe acute respiratory syndrome coronavirus 2 TKYE610419_2020 genomic RNA, complete genome""                                    "
+2020-04-01,841:a->g,42,," [43] "">LC547518.1 Severe acute respiratory syndrome coronavirus 2 hCoV-19/Japan/P1/2020 RNA, complete genome""                                      "
+2020-03-08,841:a->g,43,," [44] "">LC542809.1 Severe acute respiratory syndrome coronavirus 2 TKYE6947_2020 RNA, complete genome""                                              "
+2020-03-01,Reference,44,," [45] "">LC593817.1 Severe acute respiratory syndrome coronavirus 2 TKYE630411_2020 genomic RNA, complete genome""                                    "
+2020-08-01,841:a->g,45,," [46] "">LC534418.1 Severe acute respiratory syndrome coronavirus 2 SARS-CoV-2/Hu/DP/Kng/19-031 RNA, complete genome""                                "
+2020-02-14,Reference,46,," [47] "">LC573284.1 Severe acute respiratory syndrome coronavirus 2 TKYE620226_2020 genomic RNA, nearly complete genome""                             "
+2020-06-01,841:a->g,47,," [48] "">LC567845.1 Severe acute respiratory syndrome coronavirus 2 TKYE615419_2020 genomic RNA, nearly complete genome""                             "
+2020-05-01,841:a->g,48,," [49] "">LC593803.1 Severe acute respiratory syndrome coronavirus 2 TKYE622387_2020 genomic RNA, complete genome""                                    "
+2020-07-01,841:a->g,49,," [50] "">LC581372.1 Severe acute respiratory syndrome coronavirus 2 TKYE63738d_2020 genomic RNA, complete genome""                                    "
+2020-03-01,Reference,50,," [51] "">LC553259.2 Severe acute respiratory syndrome coronavirus 2 TKY10256_2020 RNA, nearly complete genome""                                       "
+2020-04-01,1429:a->g,51,," [52] "">MT635406.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC191a/2020, complete genome""                     "
+2020-04-01,D614G,51,," [53] "">MT772256.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC268b/2020, complete genome""                     "
+2020-06-05,841:a->g,52,," [54] "">MT509494.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC110/2020, complete genome""                      "
+2020-06-13,L54F,53,," [55] "">MT800005.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC287/2020, complete genome""                      "
+2020-06-13,D294D,53,," [56] "">MT467251.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC43/2020, complete genome""                       "
+2020-06-13,D614G,53,," [57] "">MT577012.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/773/2020, complete genome""                          "
+2020-05-03,841:a->g,54,," [58] "">MW634982.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/IN-CDC-LC0002076/2020, complete genome""             "
+2020-07-04,841:a->g,55,," [59] "">MW600627.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC454b/2020, complete genome""                     "
+2020-04-29,D614G,56,," [60] "">MT451878.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC14/2020, complete genome""                       "
+2020-04-29,2480:c->t,56,," [61] "">MT576052.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC168a/2020, complete genome""                     "
+2020,841:a->g,57,," [62] "">MT560679.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC136a/2020, complete genome""                     "
+2020-12-27,841:a->g,58,,
+2020-12-24,D614G,59,,
+2020-12-24,P681H,59,,
+2020-12-24,N856N,59,,
+2020-04-27,367:c->t,60,,
+2020-05-27,841:a->g,61,,
+2020-05-24,D294D,62,,
+2020-05-24,D614G,62,,
+2020-05-03,841:a->g,63,," [63] "">MT509656.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC113/2020, complete genome""                      "
+2021-01-03,D614G,64,," [64] "">MW519857.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/IN-CDC-STM-A100094/2021, complete genome""           "
+2021-01-03,D936D,64,," [65] "">MT483554.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC81a/2020, complete genome""                      "
+2021-01-03,V987V,64,," [66] "">MT675938.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC224a/2020, complete genome""                     "
+2020-05-05,233:g->t,65,," [67] "">MT467239.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC26/2020, complete genome""                       "
+2020-05-05,D614G,65,," [68] "">MT509508.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC106/2020, complete genome""                      "
+2020-06-08,L54F,66,," [69] "">MW181807.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/nimh-3975/2020, complete genome""                    "
+2020-06-08,D294D,66,,
+2020-06-08,D614G,66,,
+2020-04-26,841:a->g,67,,
+2020-05-05,D294D,68,,
+2020-05-05,D614G,68,,
+2020-04-23,841:a->g,69,,
+2020-06-13,D294D,70,," [70] "">MT772237.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC264b/2020, complete genome""                     "
+2020-06-13,D614G,70,," [71] "">MT772252.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC266/2020, complete genome""                      "
+2020-06-13,841:a->g,71,," [72] "">MW519847.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/IN-CDC-STM-A100107/2021, complete genome""           "
+2021-01-03,D614G,72,," [73] "">MW525075.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/IN-CDC-STM-0000013-A09/2021, complete genome""       "
+2021-01-03,P812L,72,,
+2021-01-03,3728:g->c,72,,
+2021-01-11,1362:a->g,73,,
+2021-01-11,D614G,73,,
+2021-01-11,N657N,73,,
+2021-01-11,N1119N,73,,
+2020-06-11,82:c->t,74,," [74] "">MT664201.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC208b/2020, complete genome""                     "
+2020-06-08,L54F,75,," [75] "">MT665970.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC219a/2020, complete genome""                     "
+2020-06-08,D294D,75,,
+2020-06-08,D614G,75,,
+2020-05-24,D294D,76,,
+2020-05-24,D614G,76,," [76] "">MT560693.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC137b/2020, complete genome""                     "
+2020-03-20,841:a->g,77,," [77] "">MT415323.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GMCTC469/2020, complete genome""                     "
+2020-07-06,D614G,78,," [78] "">MT954072.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC-390b/2020, complete genome""                    "
+2020-07-06,P812L,78,," [79] "">MW524986.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/IN-CDC-STM-0000014-D02/2021, complete genome""       "
+2021-01-12,D614G,79,,
+2021-01-12,2004:a->t,79,,
+2021-01-12,I1198I,79,,
+2021-01-12,Y1215Y,79,,
+2020-06-05,D294D,80,," [80] "">MT607602.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC172/2020, complete genome""                      "
+2020-06-05,A475A,80,," [81] "">MT664986.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC217a/2020, complete genome""                     "
+2020-06-05,D614G,80,," [82] "">MT741096.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC277a/2020, complete genome""                     "
+2020-06-08,L54F,81,," [83] "">MT669321.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC203a/2020, complete genome""                     "
+2020-06-08,D294D,81,," [84] "">MT740717.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC254b/2020, complete genome""                     "
+2020-06-08,D614G,81,," [85] "">MT800999.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC306a/2020, complete genome""                     "
+2020-06-13,S155I,82,," [86] "">MT481906.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC91/2020, complete genome""                       "
+2020-06-13,D614G,82,,
+2020-06-07,841:a->g,83,,
+2020-06-12,L54F,84,,
+2020-06-12,D294D,84,,
+2020-06-12,A475A,84,,
+2020-06-12,D614G,84,,
+2020-06-15,D294D,85,,
+2020-06-15,D614G,85,,
+2020-04-27,D294D,86,,
+2020-04-27,D614G,86,,
+2021-01-02,1705:a->g,87,," [87] "">MW525069.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/IN-CDC-STM-0000013-C01/2021, complete genome""       "
+2021-01-02,1749:g->a,87,," [88] "">MT560657.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC132/2020, complete genome""                      "
+2021-01-02,D614G,87,," [89] "">MW600463.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC458b/2020, complete genome""                     "
+2020-05-24,841:a->g,88,,
+2020-12-29,D294D,89,,
+2020-12-29,D614G,89,,
+2020-12-29,3150:g->t,89,,
+2020-06-03,841:a->g,90,," [90] "">MT635393.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC193a/2020, complete genome""                     "
+2020-06-18,841:a->g,91,," [91] "">MT950532.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC-362a/2020, complete genome""                    "
+2020-06-13,L54F,92,," [92] "">MT773134.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC275b/2020, complete genome""                     "
+2020-06-13,D294D,92,,
+2020-06-13,D614G,92,,
+2020-06-13,3263:a->g,92,,
+2020-06-13,3265:t->g,92,,
+2020-06-03,841:a->g,93,," [93] "">MT607603.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC178b/2020, complete genome""                     "
+2021-01-11,841:a->g,94,," [94] "">MW525033.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/USA/IN-CDC-STM-0000025-A11/2021, complete genome""       "
+2020-06-05,D294D,95,," [95] "">MT950230.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC361a/2020, complete genome""                     "
+2020-06-05,D614G,95,," [96] "">MT467237.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC25/2020, complete genome""                       "
+2020-04-26,841:a->g,96,," [97] "">MT758346.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC257a/2020, complete genome""                     "
+2020-06-12,L54F,97,," [98] "">MW555786.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/Isolate 2690/2020, complete genome""                 "
+2020-06-12,D294D,97,," [99] "">MT467246.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC40/2020, complete genome""                       "
+2020-06-12,D614G,97,,
+2020-06-30,063:a->c,98,,
+2020-04-29,841:a->g,99,,
+2020-06-08,841:a->g,100,,"[100] "">MT740438.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC241/2020, complete genome""                      "
+2020-05-27,841:a->g,101,,"[101] "">MT576040.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IND/GBRC161b/2020, complete genome""                     "
+2020-09-12,N121N,102,,"[102] "">MW155278.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC12385/2020, complete genome""                     "
+2020-09-12,S477N,102,,
+2020-09-12,Q613Q,102,,
+2020-09-12,D614G,102,,
+2020-08-19,S477N,103,,
+2020-08-19,Q613Q,103,,
+2020-08-19,D614G,103,,
+2020-08-19,T632N,103,,
+2020-08-19,L822F,103,,"[103] "">MW185009.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC14747/2020, complete genome""                     "
+2020-07-28,S477N,104,,"[104] "">MW277506.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC13099/2020, complete genome""                     "
+2020-07-28,Q613Q,104,,
+2020-07-28,D614G,104,,
+2020-07-04,F306F,105,,
+2020-07-04,S477N,105,,"[105] "">MT972405.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC2713/2020, complete genome""                      "
+2020-07-04,Q613Q,105,,"[106] "">MW277464.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC12053/2020, complete genome""                     "
+2020-07-04,D614G,105,,"[107] "">MT972153.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC2217/2020, complete genome""                      "
+2020-07-23,S477N,106,,"[108] "">MT971442.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC5702/2020, complete genome""                      "
+2020-07-23,Q613Q,106,,
+2020-07-23,D614G,106,,
+2020-06-14,D614G,107,,
+2020-06-14,C662C,107,,
+2020,S477N,108,,
+2020,Q613Q,108,,
+2020,D614G,108,,
+2020-07-20,S477N,109,,"[109] "">MT971435.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC5693/2020, complete genome""                      "
+2020-07-20,Q613Q,109,,"[110] "">MW155609.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC11658/2020, complete genome""                     "
+2020-07-20,D614G,109,,"[111] "">MW153831.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC7755/2020, complete genome""                      "
+2020-07-23,F306F,110,,
+2020-07-23,S477N,110,,
+2020-07-23,Q613Q,110,,
+2020-07-23,D614G,110,,
+2020-07-27,S477N,111,,
+2020-07-27,Q613Q,111,,
+2020-07-27,D614G,111,,
+2020-08-06,S477N,112,,"[112] "">MW321377.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC17107/2020, complete genome""                     "
+2020-08-06,Q613Q,112,,"[113] "">MW184691.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC14794/2020, complete genome""                     "
+2020-08-06,D614G,112,,"[114] "">MW154078.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC7618/2020, complete genome""                      "
+2020-09-02,S477N,113,,
+2020-09-02,Q613Q,113,,
+2020-09-02,D614G,113,,
+2020-09-02,S698L,113,,
+2020-07-22,D80Y,114,,
+2020-07-22,S477N,114,,
+2020-07-22,Q613Q,114,,
+2020-07-22,D614G,114,,
+2020-08-11,S477N,115,,"[115] "">MW184856.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC11931/2020, complete genome""                     "
+2020-08-11,Q613Q,115,,"[116] "">MW184247.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC14937/2020, complete genome""                     "
+2020-08-11,D614G,115,,"[117] "">MT641697.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC595/2020, complete genome""                       "
+2020-08-11,T632N,115,,"[118] "">MW184655.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC15036/2020, complete genome""                     "
+2020-08-11,G1124V,115,,"[119] "">MT970305.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC4009/2020, complete genome""                      "
+2020-09-06,S477N,116,,
+2020-09-06,Q613Q,116,,
+2020-09-06,D614G,116,,
+2020-03-25,Reference,117,,
+2020-08-24,S477N,118,,
+2020-08-24,Q613Q,118,,
+2020-08-24,D614G,118,,
+2020-07-10,S477N,119,,
+2020-07-10,Q613Q,119,,
+2020-07-10,D614G,119,,
+2020-07-01,S477N,120,,
+2020-07-01,Q613Q,120,,"[120] "">MW155008.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC2791/2020, complete genome""                      "
+2020-07-01,D614G,120,,"[121] "">MW153320.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC8297/2020, complete genome""                      "
+2020-08-15,S477N,121,,"[122] "">MW153142.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC9325/2020, complete genome""                      "
+2020-08-15,Q613Q,121,,"[123] "">MT970322.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC4023/2020, complete genome""                      "
+2020-08-15,D614G,121,,"[124] "">MT973239.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC6183/2020, complete genome""                      "
+2020-08-21,C432C,122,,
+2020-08-21,S477N,122,,
+2020-08-21,Q613Q,122,,
+2020-08-21,D614G,122,,
+2020-08-21,N824N,122,,
+2020-07-10,S477N,123,,
+2020-07-10,Q613Q,123,,
+2020-07-10,D614G,123,,
+2020-07-22,S477N,124,,
+2020-07-22,Q613Q,124,,
+2020-07-22,D614G,124,,
+2020-07-22,G1124V,124,,
+2020-07-23,S477N,125,,
+2020-07-23,Q613Q,125,,
+2020-07-23,D614G,125,,"[125] "">MT972058.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC6469/2020, complete genome""                      "
+2020-06-26,S477N,126,,"[126] "">MT969455.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC2312/2020, complete genome""                      "
+2020-06-26,Q613Q,126,,"[127] "">MT970313.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC4136/2020, complete genome""                      "
+2020-06-26,D614G,126,,"[128] "">MT641646.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/NT02/2020, complete genome""                         "
+2020-07-10,S477N,127,,"[129] "">MT745644.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC2018/2020, complete genome""                      "
+2020-07-10,Q613Q,127,,
+2020-07-10,D614G,127,,
+2020-02-21,Reference,128,,
+2020-05-15,841:a->g,129,,
+2020-03-26,841:a->g,130,,"[130] "">MT972129.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC1995/2020, complete genome""                      "
+2020-07-30,S477N,131,,"[131] "">MW156701.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC10761/2020, complete genome""                     "
+2020-07-30,Q613Q,131,,"[132] "">MT969793.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC2971/2020, complete genome""                      "
+2020-07-30,D614G,131,,
+2020-07-07,S477N,132,,
+2020-07-07,Q613Q,132,,
+2020-07-07,D614G,132,,
+2020-08-19,F306F,133,,"[133] "">MW321022.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC17501/2020, complete genome""                     "
+2020-08-19,S477N,133,,
+2020-08-19,Q613Q,133,,
+2020-08-19,D614G,133,,
+2020-08-19,S691F,133,,
+2020-08-19,S711S,133,,
+2020-08-19,V1228L,133,,
+2020-07-15,S477N,134,,"[134] "">MT970603.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC4263/2020, complete genome""                      "
+2020-07-15,Q613Q,134,,
+2020-07-15,D614G,134,,
+2020-08-17,A222V,135,,
+2020-08-17,S477N,135,,"[135] "">MW277468.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC13166/2020, complete genome""                     "
+2020-08-17,Q613Q,135,,"[136] "">MW156393.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC9903/2020, complete genome""                      "
+2020-08-17,D614G,135,,"[137] "">MT969625.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC2777/2020, complete genome""                      "
+2020-08-17,S698L,135,,"[138] "">MT972453.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC3174/2020, complete genome""                      "
+2020-08-24,S477N,136,,"[139] "">MW184376.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC15269/2020, complete genome""                     "
+2020-08-24,Q613Q,136,,
+2020-08-24,D614G,136,,
+2020-07-03,F306F,137,,
+2020-07-03,S477N,137,,
+2020-07-03,Q613Q,137,,
+2020-07-03,D614G,137,,
+2020-07-07,S477N,138,,
+2020-07-07,Q613Q,138,,
+2020-07-07,D614G,138,,
+2020-08-29,F306F,139,,
+2020-08-29,S477N,139,,
+2020-08-29,Q613Q,139,,
+2020-08-29,D614G,139,,
+2020-07-22,S477N,140,,
+2020-07-22,Q613Q,140,,"[140] "">MT973244.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC6191/2020, complete genome""                      "
+2020-07-22,D614G,140,,"[141] "">MT971759.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC5841/2020, complete genome""                      "
+2020-07-19,S477N,141,,
+2020-07-19,Q613Q,141,,
+2020-07-19,D614G,141,,
+2020-07-11,F306F,142,,
+2020-07-11,S477N,142,,"[142] "">MT973249.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC6196/2020, complete genome""                      "
+2020-07-11,Q613Q,142,,"[143] "">MW154655.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC8785/2020, complete genome""                      "
+2020-07-11,D614G,142,,
+2020-07-30,F306F,143,,
+2020-07-30,S477N,143,,
+2020-07-30,Q613Q,143,,
+2020-07-30,D614G,143,,
+2020-08-02,F306F,144,,
+2020-08-02,S477N,144,,"[144] "">MW184405.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC13493/2020, complete genome""                     "
+2020-08-02,Q613Q,144,,"[145] "">MW185772.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC15818/2020, complete genome""                     "
+2020-08-02,D614G,144,,"[146] "">MW276724.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC12495/2020, complete genome""                     "
+2020-08-02,S1097L,144,,
+2020-08-09,S477N,145,,
+2020-08-09,Q613Q,145,,
+2020-08-09,D614G,145,,
+2020-08-09,S698L,145,,
+2020-07-29,S477N,146,,
+2020-07-29,Q613Q,146,,
+2020-07-29,D614G,146,,
+2020-08-03,S477N,147,,"[147] "">MW185655.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC15363/2020, complete genome""                     "
+2020-08-03,Y489Y,147,,"[148] "">MW185682.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC14572/2020, complete genome""                     "
+2020-08-03,Q613Q,147,,"[149] "">MW155106.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC10525/2020, complete genome""                     "
+2020-08-03,D614G,147,,"[150] "">MT970464.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/AUS/VIC4443/2020, complete genome""                      "
+2020-08-26,C432C,148,,
+2020-08-26,S477N,148,,
+2020-08-26,Q613Q,148,,
+2020-08-26,D614G,148,,
+2020-08-26,N824N,148,,
+2020-08-27,S477N,149,,
+2020-08-27,Q613Q,149,,
+2020-08-27,D614G,149,,
+2020-08-27,P715P,149,,
+2020-07-16,S477N,150,,
+2020-07-16,Q613Q,150,,
+2020-07-16,D614G,150,,
