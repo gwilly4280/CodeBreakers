@@ -234,7 +234,7 @@ mutations<- c("Reference",mutchar)
 df_isolate$Mutations <- mutations
 
 # Removing extra variables
-rm(df_clean, isolatedseq, seqalign, aligned, muts, mut, mutchar, mutations, Repdf_fasta)
+rm(df_clean, isolatedseq, muts, mut, mutchar, mutations, Repdf_fasta)
 ```
 
 
