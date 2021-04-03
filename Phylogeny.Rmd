@@ -1,0 +1,113 @@
+---
+title: "Phylogeny"
+output: html_document
+---
+
+A NOT FINISHED TREE 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Loading Libraries
+```{r}
+library(ggtree)
+library(annotate)
+library(ape)
+library(reshape2)
+library(ggplot2)
+library(phylobase)
+```
+
+### Checking the alignment made in the full script rmd
+```{r}
+checkAlignment(seqalign, what = 1)
+```
+### Creating alignment with Countries
+```{r}
+country_seqalign <- seqalign
+
+# Change n
+dimnames(country_seqalign) = list(df_isolate$Geo_Location)
+```
+
+### Creating a distance matrix
+```{r}
+#Calculating the distance model
+DM <- dist.dna(country_seqalign, model = "K80")
+DMFinal <- as.matrix(DM)
+DMDat <- melt(DMFinal)
+
+#Visualizing the distance matrix
+DMDat2<-DMDat
+DMDat2$value[DMDat2$value>0.2]<-NA
+ggplot(data = DMDat2, aes(x=Var1, y=Var2, fill=value)) + 
+  geom_tile()+scale_fill_gradientn(colours=c("white","blue","green","red")) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
+```
+
+### Phylogenetic Tree
+```{r}
+# Building the phylogenetic tree
+tree <- nj(DM)
+str(tree)
+```
+
+```{r, fig.height=40, fig.width=10}
+# Phylogenetic tree highlighting the countries where covid mutations and evolution
+# seemed to occur
+ggtree(tree,layout = "rectangular") +
+  geom_tiplab() +
+  geom_hilight(node = 439, fill = "light pink") +
+  geom_hilight(node = 456, fill = "light blue") +
+  geom_hilight(node = 454, fill = "LemonChiffon") +
+  geom_hilight(node = 455, fill = "Moccasin") +
+  geom_hilight(node = 440, fill = "Burlywood") +
+  geom_hilight(node = 453, fill = "DarkSeaGreen") +
+  geom_hilight(node = 447, fill = "LightCoral") +
+  geom_hilight(node = 452, fill = "MediumAquamarine")
+```
+
+
+
+## This is the tree with the mutations unsure what to do with it rn
+Final tree
+```{r, fig.height=40, fig.width=10}
+# Visualizing the tree
+
+Mut_Strings <- c()
+for (i in c(1:nrow(df_isolate))){
+   Mut_Strings[i] <- paste(df_isolate$Mutations[[i]], collapse = ", ")
+}
+
+Mut_Strings
+
+mut_seqalign <- seqalign
+
+# Change names
+dimnames(mut_seqalign) = list(Mut_Strings)
+
+
+# Calculating Distance model 
+dist_dna <- dist.dna(mut_seqalign, model = "K80")
+# Refractoring distance model as a matrix
+dist_matrix <- as.matrix(dist_dna)
+# Converting to phylogenic tree
+allign_tree <- nj(dist_matrix)
+# Visualizing Tree
+ggtree(allign_tree, ) +
+   geom_tiplab()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
