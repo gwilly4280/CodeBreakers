@@ -2,10 +2,11 @@
 
 This is the reposity for final project for group2 (name <em>Codebreakers</em>) in BIOL432 at Queen's University. Here we examine the geographic distribution of SARS-CoV-2 spike protein variants
 
-### Directory
+#### DATA FILES"
 
 
-### Dataset Construction Workflow:
+
+#### Dataset Construction Workflow:
   1. <strong>Subsetting the data.R</strong>
       > Takes data from <em>sequences.csv</em><br> 
       > Filters data by completeness, trims unused columns<br>
@@ -25,7 +26,9 @@ This is the reposity for final project for group2 (name <em>Codebreakers</em>) i
       > &nbsp;&nbsp;&nbsp;&nbsp; > separate_fasta(countries) --> isolate & clean the raw sequences as <em>df_clean</em><br>
       > &nbsp;&nbsp;&nbsp;&nbsp; > isolate_seq(df_clean, start_motif, end_motif) --> isolate spike seq & add to new df as <em>df_isolate</em><br>
       > Uses ape & adegent packages to align spike seq, highlight mutations, add to dataframe as df_isolate$Mutations<br>
-      > OUTPUT: <strong>df_isolate</strong> dataframe w/ cols for: Name, Sequence, Target, seq_len, Geo_Location, Date, Mutations
+      > OUTPUT: <br>
+      > &nbsp;&nbsp;&nbsp;&nbsp; > <strong>df_isolate</strong> dataframe w/ cols for: Name, Sequence, Target, seq_len, Geo_Location, Date, Mutations<br>
+      > &nbsp;&nbsp;&nbsp;&nbsp; > <strong>seq_align</strong> DNAbin object to store results of spike-sequence alignment
   5. <strong>Mutations_functions.R</strong>
       > Loads data from <em>mutations.csv</em> as <em>mutations</em> dataframe<br> 
       > Cleans mutations the Change column to match format in df_isolate$Mutations <br>
@@ -34,11 +37,12 @@ This is the reposity for final project for group2 (name <em>Codebreakers</em>) i
       > Cleans mutations of String formatting & separates mutations into lists: 1 list of mutatations/sequence<br>
       > OUPUT: <strong>df_isolate</strong> dataframe w/ cols for: Name, Sequence, Target, seq_len, Geo_Location, Date, Mutations (as lists)
 
-### Visualizations:
+#### Visualizations:
 
   1. <strong>Mutation Accumulation.R</strong>
+      >
   2. <strong>Phylogeny.RMD</strong>
-  3. 
+  4. 
 
 
 
