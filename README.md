@@ -1,5 +1,7 @@
 # Tracking SARS-CoV-2 mutations across the world
 
+This is the reposity for final project for group2 (name <em>Codebreakers</em>) in BIOL432 at Queen's University. Here we examine the geographic distribution of SARS-CoV-2 spike protein variants
+
 ### Directory
 
 
