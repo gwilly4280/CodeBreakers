@@ -1,6 +1,6 @@
 # Tracking SARS-CoV-2 mutations across the world
 
-This is the reposity for final project for group2 (name <em>Codebreakers</em>) in BIOL432 at Queen's University. Here we examine the geographic distribution of SARS-CoV-2 spike protein variants.
+This is the reposity for final project for group2 (name <em>Codebreakers</em>) in BIOL432 at Queen's University. Here we examine the geographic and temporal distribution of SARS-CoV-2 spike protein variants.
 
 #### Dataset:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>mutation_accumulation.csv</em> - manually created file containing line-by-line mutation listing from df_isolate<br>
