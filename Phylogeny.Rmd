@@ -68,6 +68,8 @@ p <- ggtree(tree,layout = "rectangular") +
   geom_hilight(node = 447, fill = "LightCoral") +
   geom_hilight(node = 452, fill = "MediumAquamarine")
 
+write.tree(tree, "Phylogenetic_tree_country.tre")
+
 p
 ```
 
@@ -98,7 +100,7 @@ allign_tree <- nj(dist_matrix)
 ```
 
 ## Visualizing the mutation tree
-```{r, fig.height=40, fig.width=30}
+```{r, fig.height=60, fig.width=15}
 
 # Colouring by Mutation 
 imp <- gsub("\b[^D614G]+\b", "\\1" ,allign_tree$tip.label) # regex for DG14G mutation
