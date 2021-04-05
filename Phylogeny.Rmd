@@ -17,6 +17,7 @@ library(ape)
 library(reshape2)
 library(ggplot2)
 library(phylobase)
+library(ggimage)
 ```
 
 ### Checking the alignment made in the full script rmd
@@ -70,11 +71,9 @@ p <- ggtree(tree,layout = "rectangular") +
 p
 ```
 
-
-
-## This is the tree with the mutations unsure what to do with it rn
+## Creating phylogenetic tree showing the mutations
 ```{r, fig.height=40, fig.width=10}
-# Visualizing the tree
+# Getting the mutation tree ready
 
 Mut_Strings <- c()
 for (i in c(1:nrow(df_isolate))){
@@ -96,16 +95,44 @@ dist_matrix <- as.matrix(dist_dna)
 # Converting to phylogenic tree
 allign_tree <- nj(dist_matrix)
 
-# Visualizing Tree
-ggtree(allign_tree, ) +
-  geom_tiplab() +
-  geom_hilight(node = 439, fill = "light pink") +
-  geom_hilight(node = 456, fill = "light blue") +
-  geom_hilight(node = 454, fill = "LemonChiffon") +
-  geom_hilight(node = 455, fill = "Moccasin") +
-  geom_hilight(node = 440, fill = "Burlywood") +
-  geom_hilight(node = 453, fill = "DarkSeaGreen") +
-  geom_hilight(node = 447, fill = "LightCoral") +
-  geom_hilight(node = 452, fill = "MediumAquamarine")
 ```
+
+## Visualizing the mutation tree
+```{r, fig.height=40, fig.width=30}
+
+# Colouring by Mutation 
+imp <- gsub("\b[^D614G]+\b", "\\1" ,allign_tree$tip.label) # regex for DG14G mutation
+
+MutationSplit <- split(allign_tree$tip.label, imp) # Grouping by corresponding mutation
+
+MutationTree <- groupOTU(allign_tree, MutationSplit) # Grouping tip labels by their mutation
+str(MutationTree) # Checking to make sure it worked (note the new group attribute)
+
+# The mutation tree!
+ggtree(MutationTree, layout = "rectangular", aes(colour = group)) +
+  geom_tiplab(size = 2) +
+  geom_cladelabel(node = 439, color = "light pink", label = "Australia Cluster",
+                  offset = .0001, align = F) +
+  geom_cladelabel(node = 456, color = "light blue", label = "USA Cluster",
+                  offset = .0001, align = F) +
+  geom_cladelabel(node = 454, color = "LemonChiffon", label = "USA Cluster",
+                  offset = .0001, align = F) +
+  geom_cladelabel(node = 455, color = "Moccasin", label = "China Cluster",
+                  offset = .0001, align = F) +
+  geom_cladelabel(node = 440, color = "Burlywood", label = "India Cluster",
+                  offset = .0001, align = F) +
+  geom_cladelabel(node = 453, color = "DarkSeaGreen", label = "USA Cluster",
+                  offset = .0001, align = F) +
+  geom_cladelabel(node = 447, color = "LightCoral", label = "Japan Cluster",
+                  offset = .0001, align = F) +
+  geom_cladelabel(node = 452, color = "MediumAquamarine", label = "India Cluster",
+                  offset = .0001, align = F, size = 5)
+```
+
+
+
+
+
+
+
 
