@@ -4,7 +4,7 @@ library(stringr)
 # Loading Sequence data & filtering by completeness, trimming un-used cols
 dat <- read.csv('./Dataset/sequences.csv') %>%
   filter(Nuc_Completeness == "complete") %>%
-  transmute(Accession, Length, Geo_Location)
+  transmute(Accession, Length, Geo_Location, Collection_Date)
 
 # Setting number of samples per country:
 N <- 50
