@@ -41,7 +41,6 @@ This is the reposity for final project for group2 (name <em>Codebreakers</em>) i
   6. <strong>Mutation Accumulation.R</strong>
       > Reads data from <em>mutation_accumulation.csv</em><br>
       > Creates timeline of mutation accumulation by date (coloured & stacked bar plot)<br>
-      > OUPUT: <strong></strong>
   7. <strong>Phylogeny.RMD</strong>
       > INPUT: <strong>df_isolate</strong> for data, and <strong>seqalign</strong> for alignment information<br>
       > Uses ggtree, phylobase, ggimage, ggplot2, annotate, ape to create:<br>
