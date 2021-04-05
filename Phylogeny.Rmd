@@ -111,7 +111,7 @@ MutationTree <- groupOTU(allign_tree, MutationSplit) # Grouping tip labels by th
 str(MutationTree) # Checking to make sure it worked (note the new group attribute)
 
 # The mutation tree!
-ggtree(MutationTree, layout = "rectangular", aes(colour = group)) +
+m <- ggtree(MutationTree, layout = "rectangular", aes(colour = group)) +
   geom_tiplab(size = 2) +
   geom_cladelabel(node = 439, color = "light pink", label = "Australia Cluster",
                   offset = .0001, align = F) +
@@ -128,7 +128,11 @@ ggtree(MutationTree, layout = "rectangular", aes(colour = group)) +
   geom_cladelabel(node = 447, color = "LightCoral", label = "Japan Cluster",
                   offset = .0001, align = F) +
   geom_cladelabel(node = 452, color = "MediumAquamarine", label = "India Cluster",
-                  offset = .0001, align = F, size = 5)
+                  offset = .0001, align = F)
+
+write.tree(MutationTree, "Phylogenetic_tree_mutations.tre")
+
+m
 ```
 
 
