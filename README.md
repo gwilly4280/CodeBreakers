@@ -1,12 +1,14 @@
 # Tracking SARS-CoV-2 mutations across the world
 
-This is the reposity for final project for group2 (name <em>Codebreakers</em>) in BIOL432 at Queen's University. Here we examine the geographic distribution of SARS-CoV-2 spike protein variants
+This is the reposity for final project for group2 (name <em>Codebreakers</em>) in BIOL432 at Queen's University. Here we examine the geographic distribution of SARS-CoV-2 spike protein variants.
 
-#### DATA FILES"
+#### Dataset:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>mutation_accumulation.csv</em> - manually created file containing line-by-line mutation listing from df_isolate<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>mutations.csv</em> - reference file of known & studied mutations for comparison to df_isolate<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>sequences.csv</em> - original dataset of 80,000+ sequences<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>spike_reference.txt</em> - FASTA file of spike protein nucleotide sequence <br>
 
-
-
-#### Dataset Construction Workflow:
+#### Workflow:
   1. <strong>Subsetting the data.R</strong>
       > Takes data from <em>sequences.csv</em><br> 
       > Filters data by completeness, trims unused columns<br>
@@ -28,22 +30,24 @@ This is the reposity for final project for group2 (name <em>Codebreakers</em>) i
       > Uses ape & adegent packages to align spike seq, highlight mutations, add to dataframe as df_isolate$Mutations<br>
       > OUTPUT: <br>
       > &nbsp;&nbsp;&nbsp;&nbsp; > <strong>df_isolate</strong> dataframe w/ cols for: Name, Sequence, Target, seq_len, Geo_Location, Date, Mutations<br>
-      > &nbsp;&nbsp;&nbsp;&nbsp; > <strong>seq_align</strong> DNAbin object to store results of spike-sequence alignment
+      > &nbsp;&nbsp;&nbsp;&nbsp; > <strong>seqalign</strong> DNAbin object to store results of spike-sequence alignment
   5. <strong>Mutations_functions.R</strong>
       > Loads data from <em>mutations.csv</em> as <em>mutations</em> dataframe<br> 
       > Cleans mutations the Change column to match format in df_isolate$Mutations <br>
       > \- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - <br>
       > INPUT: <strong>df_isolate</strong> from <em>Full data.R</em><br>
       > Cleans mutations of String formatting & separates mutations into lists: 1 list of mutatations/sequence<br>
-      > OUPUT: <strong>df_isolate</strong> dataframe w/ cols for: Name, Sequence, Target, seq_len, Geo_Location, Date, Mutations (as lists)
-
-#### Visualizations:
-
-  1. <strong>Mutation Accumulation.R</strong>
-      >
-  2. <strong>Phylogeny.RMD</strong>
-  4. 
-
+      > OUPUT: <strong>df_isolate</strong> dataframe w/ cols for: Name, Sequence, Target, seq_len, Geo_Location, Date, Mutations (as lists
+  6. <strong>Mutation Accumulation.R</strong>
+      > Reads data from <em>mutation_accumulation.csv</em><br>
+      > Creates timeline of mutation accumulation by date (coloured & stacked bar plot)<br>
+      > OUPUT: <strong></strong>
+  7. <strong>Phylogeny.RMD</strong>
+      > INPUT: <strong>df_isolate</strong> for data, and <strong>seqalign</strong> for alignment information<br>
+      > Uses ggtree, phylobase, ggimage, ggplot2, annotate, ape to create:<br>
+      > &nbsp;&nbsp;&nbsp;&nbsp; a) A phylogeny of our sample based on the spike sequences labelled by country, with clades of interest highlighted<br>
+      > &nbsp;&nbsp;&nbsp;&nbsp; b) A phylogeny of our sample based on the spike sequences labelled by mutations, with clades of interest highlighted<br>
+      > OUTPUT: a) <strong>Phylogenetic_tree_country.tre</strong> b)<strong>Phylogenetic_tree_mutations.tre </strong>
 
 
 
