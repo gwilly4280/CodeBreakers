@@ -3,7 +3,7 @@ title: "Phylogeny"
 output: html_document
 ---
 
-A NOT FINISHED TREE 
+RMD file showing the evolutionary relationships between the COVID-19 strains across the world, showed visually in phylogenetic trees. 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -100,7 +100,7 @@ allign_tree <- nj(dist_matrix)
 ```
 
 ## Visualizing the mutation tree
-```{r, fig.height=60, fig.width=15}
+```{r, fig.height=70, fig.width=10}
 
 # Colouring by Mutation 
 imp <- gsub("\b[^D614G]+\b", "\\1" ,allign_tree$tip.label) # regex for DG14G mutation
@@ -128,7 +128,8 @@ m <- ggtree(MutationTree, layout = "rectangular", aes(colour = group)) +
   geom_cladelabel(node = 447, color = "LightCoral", label = "Japan Cluster",
                   offset = .0001, align = F) +
   geom_cladelabel(node = 452, color = "MediumAquamarine", label = "India Cluster",
-                  offset = .0001, align = F)
+                  offset = .0001, align = F) +
+  theme(legend.position = "bottom")
 
 write.tree(MutationTree, "Phylogenetic_tree_mutations.tre")
 
