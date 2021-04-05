@@ -5,7 +5,7 @@ This is the reposity for final project for group2 (name <em>Codebreakers</em>) i
 Specificially, we're looking to answer the following biological questions:
 
 1. Which regions are producing the greatest variety of strains?
-2. How are some cinically significant mutations distributed and what are the implications?
+2. What implications do these distributions have on vacine efficacy?
 
 #### Dataset:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>mutation_accumulation.csv</em> - manually created file containing line-by-line mutation listing from df_isolate<br>
