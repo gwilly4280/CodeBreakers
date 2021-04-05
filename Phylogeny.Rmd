@@ -112,7 +112,7 @@ str(MutationTree) # Checking to make sure it worked (note the new group attribut
 
 # The mutation tree!
 m <- ggtree(MutationTree, layout = "rectangular", aes(colour = group)) +
-  geom_tiplab(size = 2) +
+  geom_tiplab(size = 5) +
   geom_cladelabel(node = 439, color = "light pink", label = "Australia Cluster",
                   offset = .0001, align = F) +
   geom_cladelabel(node = 456, color = "light blue", label = "USA Cluster",
