@@ -1,8 +1,13 @@
 # Tracking SARS-CoV-2 mutations across the world
 
-Workflow:
+### Directory
+
+
+### Workflow:
   1. Subsetting the data.R
-  2. Fasta_function.R
-  3. Full Data.R
-  4. Mutations_function.R
-  5. 
+      > Takes data from <em>sequences.csv</e>
+  3. Fasta_function.R
+  4. spike_reference_test.R
+  5. Full Data.R
+  6. Mutations_function.R
+  7. 
