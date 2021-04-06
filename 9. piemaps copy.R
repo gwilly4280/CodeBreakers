@@ -7,6 +7,7 @@ library(tidyr)
 library(reshape2)
 library(ggmap)
 library(readr)
+library(maps)
 #########Reformatting the mutations.csv data
 mutations <- read_csv("Dataset/mutations.csv")
 df<-mutations
