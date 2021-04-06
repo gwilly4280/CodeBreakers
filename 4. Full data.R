@@ -1,7 +1,7 @@
 
+### FILE 4 IN WORKFLOW ###
 # Adapting Spike reference code to work with repdf
-# Code added to get it to process more than 100 sequences at a time
-# It has to loop through 100 at at time, or it doesn't work >:(
+
 remain = nrow(countries)
 i = 1
 j = 0

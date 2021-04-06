@@ -3,6 +3,8 @@ title: "Phylogeny"
 output: html_document
 ---
 
+### FILE 7 IN WORKFLOW ###
+
 ## Introduction
 
 RMD file showing the evolutionary relationships between the COVID-19 strains across the world, showed visually in phylogenetic trees. 
