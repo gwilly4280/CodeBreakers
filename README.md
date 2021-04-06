@@ -81,7 +81,7 @@ Specificially, we're looking to answer the following biological questions:
 ```
 The file is reintroduced to the local environment using FileZilla as recommended by CAC   
 
-  11.  <strong>Full_phylo.R</strong>(listed as 9.2)
+  11.  <strong>Full_phylo.R</strong>(listed as 9.2)<br>
       > Takes data from: <em>seqs.afa</em><br>
       > Visualizes full alignment 
  
