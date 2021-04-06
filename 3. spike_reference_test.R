@@ -10,7 +10,7 @@ library(dplyr)
 library(rentrez)
 
 # Loading in Fasta_functions.R file
-source("./Fasta_functions.R")
+source("./2. Fasta_functions.R")
 
 ####### PREPARING SPIKE TEMPLATE #######
 
