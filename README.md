@@ -46,6 +46,7 @@ Specificially, we're looking to answer the following biological questions:
   6. <strong>Mutation Accumulation.R</strong>
       > Reads data from <em>mutation_accumulation.csv</em><br>
       > Creates timeline of mutation accumulation by date (coloured & stacked bar plot)<br>
+      > OUTPUT: <strong>mut_acc</strong> dataframe 
   7. <strong>Phylogeny.RMD</strong>
       > INPUT: <strong>df_isolate</strong> for data, and <strong>seqalign</strong> for alignment information<br>
       > Uses ggtree, phylobase, ggimage, ggplot2, annotate, ape to create:<br>
@@ -56,7 +57,9 @@ Specificially, we're looking to answer the following biological questions:
       > INPUT: <strong>df_isolate</strong> & <strong> mut_acc</strong><br>
       > Uses dplyr to create useful summary functions
   9.  <strong>piemaps copy.R</strong>
-      > INPUT: 
+      > Takes data from: <em>mutations.csv</em><br>
+      > Uses mutation & location information from all known mutations to display relative frequencies of known spike protein variants, by country,
+      > displayed as pie charts on a map.
   10. <strong>Bash Files</strong> (Code listed here)  
       > INPUT: <strong>input.fa</strong> as file from local R into <strong>fast.sh</strong> BASH script  
       > Uses <strong>muscle</strong> within CAC HPC Frontenac to align full sequences outputting: <strong>seq.afa</strong> & the phylip format <strong>first.phy</strong>  
@@ -72,8 +75,10 @@ Specificially, we're looking to answer the following biological questions:
   
       module load muscle  
       muscle -in input.fa -out seq.afa -maxiters 1 -tree1 first.phy    
-  ```
-      > The file is reintroduced to the local environment using FileZilla as recommended by CAC   
+```
+
+The file is reintroduced to the local environment using FileZilla as recommended by CAC   
+
 
 
 
