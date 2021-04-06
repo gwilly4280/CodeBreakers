@@ -52,7 +52,10 @@ Specificially, we're looking to answer the following biological questions:
       > &nbsp;&nbsp;&nbsp;&nbsp; a) A phylogeny of our sample based on the spike sequences labelled by country, with clades of interest highlighted<br>
       > &nbsp;&nbsp;&nbsp;&nbsp; b) A phylogeny of our sample based on the spike sequences labelled by mutations, with clades of interest highlighted<br>
       > OUTPUT: a) <strong>Phylogenetic_tree_country.tre</strong> b)<strong>Phylogenetic_tree_mutations.tre </strong>
-  8. <strong>Bash</strong>  
+  8.  <strong>Data_tables.RMD</strong>
+      > INPUT: <strong>df_isolate</strong> & </strong> mut_acc<strong><br>
+      > Uses dplyr to create useful summary functions
+  10. <strong>Bash</strong>  
       > INPUT: <strong>input.fa</strong> as file from local R into <strong>fast.sh</strong> BASH script  
       > Uses <strong>muscle</strong> within CAC HPC Frontenac to align full sequences outputting: <strong>seq.afa</strong> & the phylip format <strong>first.phy</strong>  
       > &nbsp;&nbsp;&nbsp;&nbsp; Bash Script:   
