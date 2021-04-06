@@ -57,7 +57,7 @@ Specificially, we're looking to answer the following biological questions:
   8.  <strong>Data_tables.RMD</strong>
       > INPUT: <strong>df_isolate</strong> & <strong> mut_acc</strong><br>
       > Uses dplyr to create useful summary functions
-  9.  <strong>piemaps copy.R</strong>
+  9.  <strong>piemaps.R</strong>
       > Takes data from: <em>mutations.csv</em><br>
       > Uses mutation & location information from all known mutations to display relative frequencies of known spike protein variants, by country,
       > displayed as pie charts on a map.
