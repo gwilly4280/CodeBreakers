@@ -1,0 +1,63 @@
+---
+title: "Data Tables"
+output: html_notebook
+---
+
+This is the 8th file in the project workflow. 
+Please ensure all 7 prior are loaded before attempting to run these scripts
+
+This file uses dplyr code to produce summary tables of the mut_acc & df_isolate dataframes.
+
+```{r}
+library(dplyr)
+```
+
+
+Summarize number of unique mutations per country, average number of mutations per sequence, and the total number of sequences with deviation from the original reference sequence
+
+```{r}
+Table_1 <- mut_acc %>% 
+   filter(Mutation != "Reference") %>% 
+   group_by(Country) %>% 
+   summarize("Unique Mutations" = length(unique(Mutation)),
+             "Mutated Sequences" = length(unique(Index)),
+             "Avrg Mutations per Sequence" = round(length(Mutation)/length(unique(Index)), 2))
+
+knitr::kable(Table_1, align = "lccc")
+```
+
+Simple summary table for the total number of mutations found in the dataset, and the number of sequences that differ from the original reference sequence
+
+```{r}
+Table_2 <- mut_acc %>% 
+   filter(Mutation != "Reference") %>% 
+   summarize("Total Mutations" = length(unique(Mutation)),
+             "Number Mutated" = length(unique(Index)))
+
+knitr::kable(Table_2, align = "lc")
+```
+
+Data table showing total number of mutated sequences per mutation, from most frequent to least frequent
+
+```{r}
+Table_3 <- mut_acc %>% 
+   group_by(Mutation) %>% 
+   summarize("Total Mutated" = length(unique(Index)))
+
+Table_3 <- Table_3[order(Table_3$"Total Mutated", decreasing = T),]
+
+# Display top 10 most common mutation
+knitr::kable(head(Table_3, 10))
+```
+
+
+Data table showing total number of mutations per country, grouped by mutation.
+```{r, warning = F, message = F}
+Table_4 <- mut_acc %>% 
+   filter(Mutation %in% c("D614G", "841:a->g", "Q613Q", "Reference", "S477N")) %>% 
+   group_by(Mutation, Country) %>% 
+   summarize("Total Mutated" = length(unique(Index)))
+
+knitr::kable(Table_4)
+```
+
