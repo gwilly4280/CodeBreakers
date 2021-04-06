@@ -7,6 +7,7 @@ library(tidyr)
 library(reshape2)
 library(ggmap)
 library(readr)
+install.packages("maps")
 library(maps)
 #########Reformatting the mutations.csv data
 mutations <- read_csv("Dataset/mutations.csv")
@@ -43,8 +44,9 @@ worldmap <- map_data ("world")
 
 piemap <- ggplot(worldmap) +
   geom_map(data = worldmap, map = worldmap, aes(x=long, y=lat, map_id=region), col = "white", fill = "gray50") +
-  geom_scatterpie(aes(x=lon, y=lat, group = Country, r = 10),
-                  data = geonew, cols = colnames(geonew[,c(4:13)]))
+  geom_scatterpie(aes(x=lon, y=lat, group = Country, r = 6),
+                  data = geonew, cols = colnames(geonew[,c(4:13)])) +
+  theme(legend.position = "none")
 
 piemap
 
