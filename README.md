@@ -56,7 +56,9 @@ Specificially, we're looking to answer the following biological questions:
       > INPUT: <strong>df_isolate</strong> & <strong> mut_acc</strong><br>
       > Uses dplyr to create useful summary functions
   9.  <strong>piemaps copy.R</strong>
-      > INPUT: 
+      > Takes data from: <em>mutations.csv</em><br>
+      > Uses mutation & location information from all known mutations to display relative frequencies of known spike protein variants, by country,
+      > displayed as pie charts on a map.
   10. <strong>Bash Files</strong> (Code listed here)  
       > INPUT: <strong>input.fa</strong> as file from local R into <strong>fast.sh</strong> BASH script  
       > Uses <strong>muscle</strong> within CAC HPC Frontenac to align full sequences outputting: <strong>seq.afa</strong> & the phylip format <strong>first.phy</strong>  
