@@ -39,6 +39,18 @@ rm(mutations, extract_mut)
 
 ########### Work with the Extracted mutations ###########
 
+# Create function to clean date
+# Assumes if day unspecified, = 01
+# Assumes if moth unspecified, = January (01)
+clean_date <- function(date_str){
+  if (nchar(date_str) == 7){
+    date_str <- paste(date_str, "-01", sep = "")
+  } else if (nchar(date_str) == 4){
+    date_str <- paste(date_str, "-01-01", sep = "")
+  }
+  return (date_str)
+}
+
 # Function searching through mutations_ref using df_isolate mutations.
 # Takes a single row's cleaned mutations & the reference file as argument.
 # Returns vector of mutation names from the reference data if found;
@@ -73,7 +85,8 @@ clean_mut <- function(mut, ref_muts){
 # Dplyr code to rapidly process the entire dataset
 df_isolate <- df_isolate %>%
   group_by(row.names(df_isolate)) %>%
-  mutate(Mutations = I(clean_mut(Mutations, mutations_ref))) # calls clean_mut()
+  mutate(Mutations = I(clean_mut(Mutations, mutations_ref)), # calls clean_mut()
+         Date = clean_date(Date)) # Cwhile we're here, formatting the date colu
 
 # Delete temp row.names column
-df_isolate = df_isolate[-7]
+df_isolate = df_isolate[-8]

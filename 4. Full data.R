@@ -33,9 +33,10 @@ df_isolate <- isolate_seq(df_clean, start_motif, end_motif)
 df_isolate <- df_isolate %>%
   mutate(seq_len = nchar(Target))
 
-df_isolate <- rbind(spike_ref, cbind(df_isolate,Geo_Location = countries$Geo_Location))
-
-N = nrow(df_isolate)
+# Merging reference with df_isolate & adding relevant cols
+df_isolate <- rbind(spike_ref, cbind(df_isolate,
+                                     Geo_Location = countries$Geo_Location,
+                                     Date = countries$Collection_Date))
 
 #=================================
 library(ape)
@@ -51,7 +52,9 @@ isolatedseq<-as.DNAbin(isolatedseq)
 #Aligning sequences
 seqalign<-muscle(isolatedseq,quiet=F)
 
-#
+N = nrow(df_isolate)
+
+# Transforming alignment
 checkAlignment(seqalign[1:N,1:3822])
 aligned<-as.alignment(seqalign[1:N,1:3822])
 aligned<-as.DNAbin(aligned)

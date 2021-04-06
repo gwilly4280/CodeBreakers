@@ -3,6 +3,8 @@ Title:   spike_reference_test
 Made by: Christian Garnons-Williams
 Made on: 2021-03-21
 "
+### FILE 3 IN WORKFLOW ###
+
 ####### LOADING LIBRARIES #######
 library(dplyr)
 library(rentrez)
@@ -23,7 +25,8 @@ spike_ref <- separate_fasta(spike_fasta) %>%
   mutate(Target = Sequence,
          Sequence = "NULL",
          seq_len = nchar(Target),
-         Geo_Location = "REF")
+         Geo_Location = "REF",
+         Date = "2019-12")
 
 # Getting start & end motifs to capture our sequence of 12 bp/side
 start_motif <- paste(substr(spike_ref$Target, 1, 6),
