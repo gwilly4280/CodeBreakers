@@ -54,11 +54,18 @@ Specificially, we're looking to answer the following biological questions:
       > &nbsp;&nbsp;&nbsp;&nbsp; b) A phylogeny of our sample based on the spike sequences labelled by mutations, with clades of interest highlighted<br>
 <<<<<<< HEAD
       > OUTPUT: a) <strong>Phylogenetic_tree_country.tre</strong> b)<strong>Phylogenetic_tree_mutations.tre </strong>
-  8. <strong>Bash</strong>  
+  8.  <strong>Data_tables.RMD</strong>
+      > INPUT: <strong>df_isolate</strong> & <strong> mut_acc</strong><br>
+      > Uses dplyr to create useful summary functions
+  9.  <strong>piemaps copy.R</strong>
+      > Takes data from: <em>mutations.csv</em><br>
+      > Uses mutation & location information from all known mutations to display relative frequencies of known spike protein variants, by country,
+      > displayed as pie charts on a map.
+  10. <strong>Bash Files</strong> (Code listed here)  
       > INPUT: <strong>input.fa</strong> as file from local R into <strong>fast.sh</strong> BASH script  
       > Uses <strong>muscle</strong> within CAC HPC Frontenac to align full sequences outputting: <strong>seq.afa</strong> & the phylip format <strong>first.phy</strong>  
       > &nbsp;&nbsp;&nbsp;&nbsp; Bash Script:   
-  ---
+  ```
      **Script**
       #!/bin/bash  
       #SBATCH --partition=standard  
@@ -69,6 +76,7 @@ Specificially, we're looking to answer the following biological questions:
   
       module load muscle  
       muscle -in input.fa -out seq.afa -maxiters 1 -tree1 first.phy    
+<<<<<<< HEAD
   ---
       > The file is reintroduced to the local environment using FileZilla as recommended by CAC   
       > 
@@ -78,6 +86,10 @@ Specificially, we're looking to answer the following biological questions:
       > INPUT: <strong>df_isolate</strong> and <strong>muc_acc</strong><br>
       > Uses dplyr code to create some simple summary tables for ease of use
 >>>>>>> 6c8f98052900dd35806f64890d209a063dc51fbb
+=======
+  ```
+The file is reintroduced to the local environment using FileZilla as recommended by CAC   
+>>>>>>> 62b628fec4ecb68a851aadea2b74bb19ce483b72
 
 
 
