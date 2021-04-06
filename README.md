@@ -46,12 +46,16 @@ Specificially, we're looking to answer the following biological questions:
   6. <strong>Mutation Accumulation.R</strong>
       > Reads data from <em>mutation_accumulation.csv</em><br>
       > Creates timeline of mutation accumulation by date (coloured & stacked bar plot)<br>
+      > OUTPUT: <strong>mut_acc</strong> dataframe 
   7. <strong>Phylogeny.RMD</strong>
       > INPUT: <strong>df_isolate</strong> for data, and <strong>seqalign</strong> for alignment information<br>
       > Uses ggtree, phylobase, ggimage, ggplot2, annotate, ape to create:<br>
       > &nbsp;&nbsp;&nbsp;&nbsp; a) A phylogeny of our sample based on the spike sequences labelled by country, with clades of interest highlighted<br>
       > &nbsp;&nbsp;&nbsp;&nbsp; b) A phylogeny of our sample based on the spike sequences labelled by mutations, with clades of interest highlighted<br>
-      > OUTPUT: a) <strong>Phylogenetic_tree_country.tre</strong> b)<strong>Phylogenetic_tree_mutations.tre </strong>
+      > OUTPUT: a) <strong>Phylogenetic_tree_country.tre</strong> b)<strong>Phylogenetic_tree_mutations.tre </strong> 
+  8. <strong>Data_tables.RMD</strong
+      > INPUT: <strong>df_isolate</strong> and <strong>muc_acc</strong>
+      > Uses dplyr code to create some simple summary tables for ease of use
 
 
 
