@@ -9,6 +9,8 @@ largeTree<-nj(large)
 Full_length<-ggtree(largeTree,branch.length='none')+ geom_tiplab()
 Full_length
 
+### #10 IN WORKFLOW ### 
+
 ggplot(data = PDat, aes(x=Var1, y=Var2, fill=value)) +
   geom_tile()
 library(maps)
