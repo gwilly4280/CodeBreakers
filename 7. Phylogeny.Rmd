@@ -90,7 +90,7 @@ The relevant clades are highlighted by different colours, each showing countries
 The Australia cluster at node 439 shows the evolution of multiple Covid-19 mutations. 
 
 ## Creating phylogenetic tree showing the mutations
-```{r, fig.height=40, fig.width=10}
+```{r, fig.height=15}
 # Getting the mutation tree ready
 
 Mut_Strings <- c()
@@ -114,13 +114,9 @@ DMDat4<-DMDat3
 DMDat4$value[DMDat4$value>0.2]<-NA
 ggplot(data = DMDat4, aes(x=Var1, y=Var2, fill=value)) + 
   geom_tile()+scale_fill_gradientn(colours=c("white","blue","green","red")) +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
+  theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5)) +
+  theme(text = element_text(size=20))
 
-DMDat3<-dist_matrix
-DMDat3$value[DMDat3$value>0.2]<-NA
-ggplot(data = DMDat3, aes(x=Var1, y=Var2, fill=value)) + 
-  geom_tile()+scale_fill_gradientn(colours=c("white","blue","green","red")) +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 ```
 Figure 4. Visual of distance matrix for the mutations, used to show the range of similarity between the sequences in the specific mutations. 
 The highest levels of dissimilarity are shown in red, with the most similar shown in light purple. 
@@ -160,9 +156,9 @@ m <- ggtree(MutationTree, layout = "rectangular", aes(colour = group)) +
                   offset = .0001, align = F) +
   theme(legend.position = "bottom")
 
-write.tree(MutationTree, "Phylogenetic_tree_mutations.tre")
+write.tree(MutationTree, "Phylogenetic_tree_mutations.tre") # saving the tree
 
-m
+m # showing the tree!
 ```
 
 Figure 5. Phylogenetic tree showing the evolutionary relationship between COVID-19 strains coloured by mutation. 
