@@ -52,7 +52,6 @@ Specificially, we're looking to answer the following biological questions:
       > Uses ggtree, phylobase, ggimage, ggplot2, annotate, ape to create:<br>
       > &nbsp;&nbsp;&nbsp;&nbsp; a) A phylogeny of our sample based on the spike sequences labelled by country, with clades of interest highlighted<br>
       > &nbsp;&nbsp;&nbsp;&nbsp; b) A phylogeny of our sample based on the spike sequences labelled by mutations, with clades of interest highlighted<br>
-<<<<<<< HEAD
       > OUTPUT: a) <strong>Phylogenetic_tree_country.tre</strong> b)<strong>Phylogenetic_tree_mutations.tre </strong>
   8.  <strong>Data_tables.RMD</strong>
       > INPUT: <strong>df_isolate</strong> & <strong> mut_acc</strong><br>
@@ -76,20 +75,10 @@ Specificially, we're looking to answer the following biological questions:
   
       module load muscle  
       muscle -in input.fa -out seq.afa -maxiters 1 -tree1 first.phy    
-<<<<<<< HEAD
-  ---
-      > The file is reintroduced to the local environment using FileZilla as recommended by CAC   
-      > 
-=======
-      > OUTPUT: a) <strong>Phylogenetic_tree_country.tre</strong> b)<strong>Phylogenetic_tree_mutations.tre </strong> 
-  8. <strong>Data_tables.RMD</strong>
-      > INPUT: <strong>df_isolate</strong> and <strong>muc_acc</strong><br>
-      > Uses dplyr code to create some simple summary tables for ease of use
->>>>>>> 6c8f98052900dd35806f64890d209a063dc51fbb
-=======
-  ```
+```
+
 The file is reintroduced to the local environment using FileZilla as recommended by CAC   
->>>>>>> 62b628fec4ecb68a851aadea2b74bb19ce483b72
+
 
 
 
