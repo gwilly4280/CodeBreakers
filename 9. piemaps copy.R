@@ -50,3 +50,6 @@ piemap <- ggplot(worldmap) +
 
 piemap
 
+# This figure shows the presence of mutations across the world
+# partially showing an answer to our first biological question
+# and demonstrating that mutations occur globally
