@@ -1,6 +1,10 @@
 library(dplyr)
 library(stringr)
 
+### FILE 1 IN WORKFLOW ###
+# Subsetting the data by country, and filtering by completeness to create a
+# better dataset to answer our biological questions.
+
 # Loading Sequence data & filtering by completeness, trimming un-used cols
 dat <- read.csv('./Dataset/sequences.csv') %>%
   filter(Nuc_Completeness == "complete") %>%

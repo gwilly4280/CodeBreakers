@@ -5,7 +5,10 @@ output: html_document
 
 ## Introduction
 
-RMD file showing the evolutionary relationships between the COVID-19 strains across the world, showed visually in phylogenetic trees. It begins to answer our first biological question: which regions are producing the greatest variety of strains? By looking at the evolutionary relationship and where most of the mutations are located graphically, we can begin to understand if geographical location has an impact on variety or creation of mutations. 
+RMD file showing the evolutionary relationships between the COVID-19 strains across the world, showed visually in phylogenetic trees. 
+It begins to answer our first biological question: which regions are producing the greatest variety of strains? 
+By looking at the evolutionary relationship and where most of the mutations are located graphically, 
+we can begin to understand if geographical location has an impact on variety or creation of mutations. 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -50,7 +53,8 @@ ggplot(data = DMDat2, aes(x=Var1, y=Var2, fill=value)) +
   geom_tile()+scale_fill_gradientn(colours=c("white","blue","green","red")) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 ```
-Figure 2. Visual of distance matrix, used to show the range of similarity between nthe sequences in the countries. The sequences with the highest dissimilarity are USA and Australia, and USA seems to have high dissimilarity in compairson to most countries. 
+Figure 2. Visual of distance matrix, used to show the range of similarity between the sequences in the countries.
+The sequences with the highest dissimilarity are USA and Australia, and USA seems to have high dissimilarity in compairson to most countries. 
 
 ## Creating Phylogenetic Tree representing the countries
 ```{r}
@@ -79,7 +83,9 @@ write.tree(tree, "Phylogenetic_tree_country.tre")
 p
 ```
 
-Figure 3. Phylogenetic tree showing the evolutionary relationships of the COVID-19 sequences with the emphasis on country of origin. The relevant clades are highlighted by different colours, each showing countries where Covid-19 mutations seems to have spread independently. The Australia cluster at node 439 shows the evolution of multiple Covid-19 mutations. 
+Figure 3. Phylogenetic tree showing the evolutionary relationships of the COVID-19 sequences with the emphasis on country of origin.
+The relevant clades are highlighted by different colours, each showing countries where Covid-19 mutations seems to have spread independently. 
+The Australia cluster at node 439 shows the evolution of multiple Covid-19 mutations. 
 
 ## Creating phylogenetic tree showing the mutations
 ```{r, fig.height=40, fig.width=10}
@@ -114,7 +120,8 @@ ggplot(data = DMDat3, aes(x=Var1, y=Var2, fill=value)) +
   geom_tile()+scale_fill_gradientn(colours=c("white","blue","green","red")) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 ```
-Figure 4. Visual of distance matrix for the mutations, used to show the range of similarity between the sequences in the specific mutations. The highest levels of dissimilarity are shown in red, with the most similar shown in light purple. 
+Figure 4. Visual of distance matrix for the mutations, used to show the range of similarity between the sequences in the specific mutations. 
+The highest levels of dissimilarity are shown in red, with the most similar shown in light purple. 
 
 ## Visualizing the mutation tree
 ```{r, fig.height=70, fig.width=10}
@@ -156,12 +163,22 @@ write.tree(MutationTree, "Phylogenetic_tree_mutations.tre")
 m
 ```
 
-Figure 5. Phylogenetic tree showing the evolutionary relationship between COVID-19 strains coloured by mutation. The relevant clades showed in figure 3 are noted by bars on the right side of the tree, and the legend is shown at the bottom. This tree also demonstrates a high variety of mutations found in the Australian cluster. 
+Figure 5. Phylogenetic tree showing the evolutionary relationship between COVID-19 strains coloured by mutation. 
+The relevant clades showed in figure 3 are noted by bars on the right side of the tree, and the legend is shown at the bottom. 
+This tree also demonstrates a high variety of mutations found in the Australian cluster. 
 
 
 ## Conclusion
 
-Our first biological question asks: which regions are producing the greatest variety of strains? This question was looked at through the creation of two phylogenetic trees, the first focusing the countries COVID-19 evolution (Figure 3) and the second at the mutations across the evolutionary tree (Figure 5). By looking at our clades of interest (which are highlighted in Figure 3) we have focused on 8 groups of evolutionary COVID-19 clusters, which all occur in individual countries. The one of most interest is the Australia cluster, the which is highlighted in pink on Figure 3. This cluster shows a few mutations that are not found in other parts of the world (A22V, C432C, S477N, N121N), and has shown the highest variance in unique mutations. Therefore, these phylogenies demonstrate that the region which is producing the greatest variety of strains within our data is Australia. Reasons for this may be due to its isolation as an island, and also its strict COVID-19 measures which isolated it even further from the rest of the world. Their mutations are unique to their own country, possibly because there were less travelers to spread it elsewhere, and because they restricted the boarders therefore bringing in less foreign mutations. 
+Our first biological question asks: which regions are producing the greatest variety of strains? 
+This question was looked at through the creation of two phylogenetic trees, the first focusing the countries COVID-19 evolution (Figure 3)
+and the second at the mutations across the evolutionary tree (Figure 5). By looking at our clades of interest (which are highlighted in Figure 3) 
+we have focused on 8 groups of evolutionary COVID-19 clusters, which all occur in individual countries. The one of most interest is the Australia cluster, 
+the which is highlighted in pink on Figure 3. This cluster shows a few mutations that are not found in other parts of the world (A22V, C432C, S477N, N121N), 
+and has shown the highest variance in unique mutations. Therefore, these phylogenies demonstrate that the region which is producing the greatest variety 
+of strains within our data is Australia. Reasons for this may be due to its isolation as an island, and also its strict COVID-19 measures which isolated 
+it even further from the rest of the world. Their mutations are unique to their own country, possibly because there were less travelers to spread it elsewhere,
+and because they restricted the boarders therefore bringing in less foreign mutations. 
 
 
 

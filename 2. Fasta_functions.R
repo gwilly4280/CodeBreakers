@@ -5,6 +5,8 @@ Made on: 2021-03-18
 Version: 3 (2021-03-21)
 "
 
+### FILE 2 IN WORKFLOW ###
+
 # Takes String FASTA file as input
 # Returns dataframe w/ w/ 1 col for header, & 1 for raw sequence
 # with each row representing a single FASTA entry from the FASTA file
