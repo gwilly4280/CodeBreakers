@@ -75,7 +75,7 @@ Specificially, we're looking to answer the following biological questions:
       module load muscle  
       muscle -in input.fa -out seq.afa -maxiters 1 -tree1 first.phy    
   ```
-      > The file is reintroduced to the local environment using FileZilla as recommended by CAC   
+The file is reintroduced to the local environment using FileZilla as recommended by CAC   
 
 
 
