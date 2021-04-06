@@ -13,7 +13,7 @@ Full_length
 
 largemelted$Var1<-gsub("^(.{3}).*", "\\1", largemelted$Var1)
 largemelted$Var2<-gsub("^(.{3}).*", "\\1", largemelted$Var2)
-ggplot(data = largemelted, aes(x=Var1, y=Var2, fill=value)) +
+large_mat_vis<-ggplot(data = largemelted, aes(x=Var1, y=Var2, fill=value)) +
   geom_tile()+scale_fill_gradientn(colours=c("white","blue","green","red")) +
   theme(axis.text.x = )
-
+large_mat_vis
