@@ -52,6 +52,24 @@ Specificially, we're looking to answer the following biological questions:
       > &nbsp;&nbsp;&nbsp;&nbsp; a) A phylogeny of our sample based on the spike sequences labelled by country, with clades of interest highlighted<br>
       > &nbsp;&nbsp;&nbsp;&nbsp; b) A phylogeny of our sample based on the spike sequences labelled by mutations, with clades of interest highlighted<br>
       > OUTPUT: a) <strong>Phylogenetic_tree_country.tre</strong> b)<strong>Phylogenetic_tree_mutations.tre </strong>
+  8. <strong>Bash</strong>  
+      > INPUT: <strong>input.fa</strong> as file from local R into <strong>fast.sh</strong> BASH script  
+      > Uses <strong>muscle</strong> within CAC HPC Frontenac to align full sequences outputting: <strong>seq.afa</strong> & the phylip format <strong>first.phy</strong>  
+      > &nbsp;&nbsp;&nbsp;&nbsp; Bash Script:   
+  ---
+     **Script**
+      #!/bin/bash  
+      #SBATCH --partition=standard  
+      #SBATCH --job-name=1fastatrial  
+      #SBATCH -c 1  
+      #SBATCH --mem=20G  
+      #SBATCH --time=05:30:00  
+  
+      module load muscle  
+      muscle -in input.fa -out seq.afa -maxiters 1 -tree1 first.phy    
+  ---
+      > The file is reintroduced to the local environment using FileZilla as recommended by CAC   
+      > 
 
 
 
